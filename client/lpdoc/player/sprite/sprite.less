@@ -1,0 +1,48 @@
+
+.sprite{
+	position: absolute;
+	height            : 240px;
+	width : 160px;
+	z-index : 9000;
+
+	top : 50%;
+	left : 50%;
+	.transform(translateY(-50%) translateX(-50%));
+
+
+	width             : 160px;
+	background-image  : url('/assets/lpdoc/player/sprite/sprite.png');
+	background-repeat : no-repeat;
+
+	//background-color: green;
+
+	.unselectable();
+
+	&.frame0{
+		background-position: -30px -30px;
+	}
+	&.frame1{
+		background-position: -250px -30px;
+	}
+	&.frame2{
+		background-position: -460px -30px;
+	}
+	&.frame3{
+		background-position: -680px -30px;
+	}
+	&.frame4{
+		background-position: -910px -30px;
+	}
+	&.frame5{
+		background-position: -1130px -30px;
+	}
+	&.frame6{
+		background-position: -1350px -30px;
+	}
+	&.frame7{
+		background-position: -1550px -30px;
+	}
+
+
+
+}

@@ -1,0 +1,24 @@
+{
+  "name": "lpdoc",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stolksdorf/lpdoc.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/stolksdorf/lpdoc/issues"
+  },
+  "dependencies": {
+    "express": "^4.10.4",
+    "gulp": "^3.8.10",
+    "node-jsx": "^0.12.4",
+    "recoil": "git+ssh://git@github.com:stolksdorf/recoil.git"
+  }
+}

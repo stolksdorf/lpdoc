@@ -1,0 +1,56 @@
+.timeline{
+
+
+	overflow:hidden;
+	position: relative;
+	padding-bottom: 50vh;
+	z-index : @timelineIndex;
+
+
+
+	.marker{
+		z-index: @markerIndex;
+
+		position: absolute;
+		border-bottom : 6px solid white;
+		margin-top: -21px;
+		padding-left: 5px;
+		padding-bottom: 5px;
+		height : 1.3em;
+		font-size: 0.8em;
+
+		color : white;
+
+		&:first-child{
+			display:none;
+		}
+
+
+		/*
+		&:nth-child(even){
+			color : transparent;
+			overflow: hidden;
+			width : 20px;
+		}
+		*/
+	}
+
+	.item{
+		z-index: @markerIndex;
+
+		position: absolute;
+		left : 50%;
+		.transform(translateY(-50%) translateX(-50%));
+		font-size: 4em;
+		text-shadow:
+		    -3px -3px 0 white,
+		    3px -3px 0 white,
+		    -3px 3px 0 white,
+		    3px 3px 0 white;
+
+
+	}
+
+
+
+}
