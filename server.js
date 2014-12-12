@@ -7,5 +7,4 @@ app.get("*", function (req, res) {
 	return res.send(fs.readFileSync('./build/lpdoc/index.html', 'utf8'));
 });
 
-app.listen(8000);
-console.log('Listening on 8000');
+app.listen(5000);
