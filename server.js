@@ -4,7 +4,7 @@ var app = express();
 
 require('node-jsx').install();
 
-app.use(express.static('./build'));
+app.use(express.static(__dirname + '/build'));
 
 
 

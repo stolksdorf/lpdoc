@@ -18,7 +18,6 @@
   "dependencies": {
     "express": "^4.10.4",
     "gulp": "^3.8.10",
-    "node-jsx": "^0.12.4",
-    "recoil": "git+ssh://git@github.com:stolksdorf/recoil.git"
+    "node-jsx": "^0.12.4"
   }
 }
