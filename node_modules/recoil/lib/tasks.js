@@ -11,6 +11,7 @@ module.exports = function(gulp, configOverride){
 		serverWatchPaths: [],
 		serverScript: null,
 		buildPath: './build/',
+		renderStatic : false,
 
 		pageTemplate: null,
 		iconsPath: null,

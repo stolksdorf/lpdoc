@@ -12,6 +12,8 @@ var gulp = recoil.tasks(gulp, {
 	projectModules: [],
 	assetExts: ["*.svg", "*.png", "*.jpg", "*.pdf", "*.ico", "*.bmp", '*.ttf'],
 
+	renderStatic : true,
+
 	serverWatchPaths: ["server"],
 	serverScript: "./server.js",
 
