@@ -2,44 +2,52 @@
 var React = require('react');
 var _ = require('underscore');
 var cx = React.addons.classSet;
+var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 var Sprite = require('./sprite/sprite.jsx');
+
 
 var Player = React.createClass({
 
 	getDefaultProps: function() {
 		return {
-			scroll : 0
+			scroll : 0,
+			currentItem : null,
+			percentage : 0
 		};
 	},
 
 	render : function(){
 		var self = this;
 
-		var config = this.props.config;
+		var frame = Math.floor(this.props.scroll / 150) % 8;
 
-		var dayRatio = 150;
-
-
-		var start = moment(config.start, "MMM Do, YYYY");
-		var end = moment(config.end, "MMM Do, YYYY");
-		var scrollDay = moment(start).add(Math.floor(this.props.scroll / dayRatio), 'days');
-
-
-		var frame = Math.floor(this.props.scroll /200) % 8;
-
-		var percentage = (scrollDay.unix() - start.unix()) / ( end.unix() - start.unix());
+		var showItem = [];
+		if(this.props.currentItem){
+			frame = 8;
+			showItem = (
+				<div className='showItem' key={this.props.currentItem.date}>
+					<div>{this.props.currentItem.name}</div>
+					<i className={'fa ' + this.props.currentItem.icon} />
+				</div>
+			);
+		}
 
 		return(
 			<div className='player'>
+				<div className='container'>
 
-				<div className='percentage'>
-					{Math.round(percentage * 10000) / 100} %
+					<div className='percentage'>
+						{Math.round(this.props.percentage * 10000) / 100} %
+					</div>
+					{this.props.scrollDay.format()}
+
+					<ReactCSSTransitionGroup transitionName="fade">
+						{showItem}
+					</ReactCSSTransitionGroup>
+
+					<Sprite frame={frame} imageSrc='assets/lpdoc/player/sprite/white_coat.png' />
 				</div>
-
-
-
-				<Sprite frame={frame} />
 			</div>
 		);
 	}

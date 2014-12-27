@@ -6,10 +6,14 @@
 }
 
 
+@topSectionHeight : 300px;
+
 @markerIndex : 900;
-@topSectionIndex : 800;
+@topSectionIndex : 910;
 @timelineIndex : 890;
 @playerIndex : 1000;
+@itemBarIndex : 1000;
+@backgroundIndex : -1;
 
 body{
 	margin : 0;
@@ -23,18 +27,7 @@ body{
 	height: 100%;
 
 
-	.background{
-		opacity : 0.6;
-		width : 100%;
-		height : 100%;
-		background-image: url('/assets/lpdoc/bg.png');
-		background-repeat: repeat-y;
-		background-size: 100%;
-		padding-bottom: 50vh;
 
-
-
-	}
 
 	.PACHOW{
 		position: fixed;
@@ -50,6 +43,33 @@ body{
 	}
 }
 
+.fade-enter {
+	opacity: 0.01;
+	transition: opacity .25s ease-in;
+}
+
+.fade-enter.fade-enter-active {
+	opacity: 1;
+}
+
+.fade-leave {
+	opacity: 1;
+	transition: opacity .25s ease-in;
+}
+
+.fade-leave.fade-leave-active {
+	opacity: 0.01;
+}
+
+
+
+
+
+
+
+
+
+//Mixins
 .unselectable(){
 	-moz-user-select: none;
 	-khtml-user-select: none;
@@ -57,3 +77,61 @@ body{
 	-o-user-select: none;
 }
 
+.vendor(@property, @value) {
+	-webkit-@{property}: @value;
+	 -khtml-@{property}: @value;
+	   -moz-@{property}: @value;
+			@{property}: @value;
+}
+
+.gradientVertical(@startColor: blue, @endColor: red, @stop1 : 0%, @stop2 : 100%) {
+	background-color: @startColor;
+	background: -webkit-linear-gradient(@startColor @stop1, @endColor @stop2);
+	background: -moz-linear-gradient(@startColor @stop1, @endColor @stop2);
+	background: -ms-linear-gradient(@startColor @stop1, @endColor @stop2);
+	background: -o-linear-gradient(@startColor @stop1, @endColor @stop2);
+	background: linear-gradient(@startColor @stop1, @endColor @stop2);
+}
+
+
+//Animation Maker
+@defaultDuration : 0.25s;
+@defaultEasing   : ease;
+.createFrames(@name, @from, @to){
+	@frames: {
+		from { @from(); }
+		to { @to(); }
+	};
+	@-webkit-keyframes @name {@frames();}
+	   @-moz-keyframes @name {@frames();}
+		@-ms-keyframes @name {@frames();}
+		 @-o-keyframes @name {@frames();}
+			@keyframes @name {@frames();}
+}
+
+.createAnimation(@name, @duration : @defaultDuration, @easing : @defaultEasing){
+	.vendor(animation-name, @name);
+	.vendor(animation-duration, @duration);
+	.vendor(animation-timing-function, @easing);
+}
+
+.fadeOut(@duration : @defaultDuration, @easing : @defaultEasing){
+	.createAnimation(fadeOut; @duration; @easing);
+	.createFrames(fadeOut,
+		{ opacity : 1; },
+		{ opacity : 0; }
+	);
+}
+//Animates all properties on an element
+.animateAll(@duration : @defaultDuration, @easing : @defaultEasing){
+	-webkit-transition: all @duration @easing;
+	   -moz-transition: all @duration @easing;
+		 -o-transition: all @duration @easing;
+			transition: all @duration @easing;
+}
+.animate(@prop, @duration : @defaultDuration, @easing : @defaultEasing){
+	-webkit-transition: @prop @duration @easing;
+	   -moz-transition: @prop @duration @easing;
+		 -o-transition: @prop @duration @easing;
+			transition: @prop @duration @easing;
+}

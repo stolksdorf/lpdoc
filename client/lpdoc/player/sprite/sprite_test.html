@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src='http://code.jquery.com/jquery-1.11.0.min.js'></script>
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js'></script>
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css" />
+	</head>
+	<style>
+		.container{
+			overflow: hidden;
+			width : 130px;
+			position: relative;
+			height : 200px;
+		}
+		canvas{
+			position: absolute;
+			top : 0px;
+			left : 0px;
+		}
+	</style>
+
+
+	<body>
+		<div class='container'>
+			<canvas></canvas>
+		</div>
+
+		<div class='index'>0</div>
+		<div>Scroll to run, click to get item!</div>
+	</body>
+	<script>
+
+	Number.prototype.mod = function(n) {
+	    return ((this%n)+n)%n;
+	};
+
+
+	var index = 0;
+
+	$(document).ready(function(){
+		$('body').bind('mousewheel', function(e){
+			if(e.originalEvent.wheelDelta > 0){
+				index = (index - 1).mod(8)
+			}else{
+				index = (index + 1).mod(8)
+			}
+			$('.index').text(index);
+
+			draw();
+		})
+		$('.container').click(function(){
+			index = 8;
+			draw();
+		})
+	});
+
+	var canvas = $('canvas')[0]
+	var ctx = canvas.getContext('2d');
+	ctx.translate(0, -15);
+
+	var draw = function(){
+		ctx.clearRect ( 0 , 15 , canvas.width, canvas.height );
+		ctx.imageSmoothingEnabled = false;
+		ctx.drawImage(img, index * -126, 0, img.width * 6, img.height * 6);
+	}
+
+	var img = new Image();
+	img.src = 'white_coat.png';
+	img.onload = draw;
+
+
+
+	</script>
+
+</html>
