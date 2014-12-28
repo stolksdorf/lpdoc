@@ -9,17 +9,24 @@ var ItemBar = require('./itemBar/itemBar.jsx');
 var Timeline = require('./timeline/timeline.jsx');
 var TopSection = require('./topSection/topSection.jsx');
 
+
+
+var sprites = {
+	base             : 'assets/lpdoc/player/sprite/base.png',
+	white_coat       : 'assets/lpdoc/player/sprite/white_coat.png',
+	white_coat_scope : 'assets/lpdoc/player/sprite/white_coat_scope.png',
+	short_hair       : 'assets/lpdoc/player/sprite/short_hair.png'
+};
+
+
+
+
 var lpdoc = React.createClass({
 
 	getInitialState: function() {
 		return {
 			config : null,
 			scroll: 0,
-			PACHOW :{
-				show : false,
-				x : 0,
-				y : 0
-			}
 		};
 	},
 
@@ -27,10 +34,14 @@ var lpdoc = React.createClass({
 	processConfig : function(config){
 		config.start = moment(config.start, "MMM Do, YYYY");
 		config.end = moment(config.end, "MMM Do, YYYY");
+		config.lastSprite = sprites.base;
 		config.events = _.map(config.events, function(event){
 			event.date = moment(event.date, "MMM Do, YYYY");
+			if(event.lp_sprite) config.lastSprite = sprites[event.lp_sprite];
 			return event;
-		})
+		});
+
+		console.log(config);
 		return config;
 	},
 
@@ -39,9 +50,12 @@ var lpdoc = React.createClass({
 
 		//update scroll, number of days passed, items collected, current item
 		var scrollDay = moment(config.start).add(Math.floor(scroll / config.dayPixelRatio), 'days');
-		var currentItem;
+		var currentItem, currentSprite = sprites.base;
 		var itemsCollected = _.reduce(config.events, function(r, event){
-			if(event.date.unix() <= scrollDay.unix()) r.push(event);
+			if(event.date.unix() <= scrollDay.unix()){
+				r.push(event);
+				if(event.lp_sprite) currentSprite = sprites[event.lp_sprite];
+			}
 			if(event.date.diff(scrollDay, 'days') === 0) currentItem = event;
 			return r;
 		},[]);
@@ -52,16 +66,14 @@ var lpdoc = React.createClass({
 			scrollDay : scrollDay,
 			itemsCollected : itemsCollected,
 			currentItem : currentItem,
+			currentSprite : currentSprite,
 			percentage : (scroll / config.dayPixelRatio) / ( config.end.diff(config.start, 'days'))
 		});
 	},
 
 	componentDidMount: function() {
 		var self = this;
-		window.title = 'PACHOW!';
-
 		$.getJSON('https://dl.dropboxusercontent.com/u/562800/lpdoc_config.json', function(config){
-			console.log(config);
 			self.update(0, self.processConfig(config))
 		})
 
@@ -76,13 +88,24 @@ var lpdoc = React.createClass({
 		//Don't load anything if we don't have the config
 		if(!this.state.config) return <noscript />
 
+		var percentage;
+		if(this.state.scroll !== 0){
+			percentage = (
+				<div className='percentage'>
+					{Math.round(this.state.percentage * 10000) / 100}%
+				</div>
+			);
+		}
+
 		return(
 			<div className='lpdoc'>
-				<TopSection scroll={this.state.scroll} />
+				<TopSection
+					config={this.state.config}
+					scroll={this.state.scroll}
+					percentage={this.state.percentage} />
 
 				<Player
-				scrollDay={this.state.scrollDay}
-					percentage={this.state.percentage}
+					currentSprite={this.state.currentSprite}
 					currentItem={this.state.currentItem}
 					config={this.state.config}
 					scroll={this.state.scroll}/>
@@ -98,24 +121,14 @@ var lpdoc = React.createClass({
 					scroll={this.state.scroll} />
 
 
-				<ItemBar items={this.state.itemsCollected} config={this.state.config} />
+				<ItemBar items={this.state.itemsCollected}
+						 config={this.state.config}
+						 scroll={this.state.scroll}/>
+
+				{percentage}
 			</div>
 		);
 	}
 });
 
 module.exports = lpdoc;
-
-//
-
-/*
-<img src="/assets/lpdoc/pachow.png" className={cx({
-	PACHOW : true,
-	show : this.state.PACHOW.show
-})} style={{
-	top : this.state.PACHOW.y,
-	left : this.state.PACHOW.x,
-}}></img>
-
-
- */

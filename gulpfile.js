@@ -10,7 +10,7 @@ var gulp = recoil.tasks(gulp, {
 	pageTemplate: "./client/template.hbs",
 
 	projectModules: [],
-	assetExts: ["*.svg", "*.png", "*.jpg", "*.pdf", "*.ico", "*.bmp", '*.ttf'],
+	assetExts: ["*.svg", "*.png", "*.jpg", "*.pdf", "*.ico", "*.bmp", '*.ttf', '*.gif'],
 
 	renderStatic : true,
 

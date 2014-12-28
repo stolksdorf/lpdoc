@@ -4,7 +4,7 @@ var _ = require('underscore');
 var cx = React.addons.classSet;
 
 
-
+var Item = require('../itemIcon/itemIcon.jsx');
 
 var Timeline = React.createClass({
 
@@ -53,9 +53,9 @@ var Timeline = React.createClass({
 
 				var days = date.diff(config.start, 'days');
 
-				r.push(<div className='item' key={event.date.format()} style={{top: config.dayPixelRatio * days + TOP_OFFSET}}>
+				r.push(<Item item={event} key={event.date.format()} style={{top: config.dayPixelRatio * days + TOP_OFFSET}}>
 					<i className={'fa ' + event.icon} />
-				</div>)
+				</Item>)
 
 			}
 

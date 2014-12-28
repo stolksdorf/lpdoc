@@ -5,6 +5,7 @@ var cx = React.addons.classSet;
 var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 var Sprite = require('./sprite/sprite.jsx');
+var ItemIcon = require('../itemIcon/itemIcon.jsx');
 
 
 var Player = React.createClass({
@@ -22,31 +23,37 @@ var Player = React.createClass({
 
 		var frame = Math.floor(this.props.scroll / 150) % 8;
 
-		var showItem = [];
+		var itemBanner = [], hoverItem;
 		if(this.props.currentItem){
 			frame = 8;
-			showItem = (
-				<div className='showItem' key={this.props.currentItem.date}>
-					<div>{this.props.currentItem.name}</div>
-					<i className={'fa ' + this.props.currentItem.icon} />
+			itemBanner = (
+				<div className='itemBanner' key={this.props.currentItem.date}>
+					<div className='name'>{this.props.currentItem.name}</div>
+					<div className='desc'>{this.props.currentItem.desc}</div>
 				</div>
 			);
+			hoverItem = (
+				<div className='hoverItem'>
+					<ItemIcon item={this.props.currentItem} />
+					<img src='/assets/lpdoc/sparkle.gif' />
+				</div>
+			);
+		}
+		if(this.props.scroll === 0){
+			frame = 8;
+
+			//fix
+			this.props.currentSprite = 'assets/lpdoc/player/sprite/white_coat.png';
 		}
 
 		return(
 			<div className='player'>
 				<div className='container'>
-
-					<div className='percentage'>
-						{Math.round(this.props.percentage * 10000) / 100} %
-					</div>
-					{this.props.scrollDay.format()}
-
 					<ReactCSSTransitionGroup transitionName="fade">
-						{showItem}
+						{itemBanner}
 					</ReactCSSTransitionGroup>
-
-					<Sprite frame={frame} imageSrc='assets/lpdoc/player/sprite/white_coat.png' />
+					{hoverItem}
+					<Sprite frame={frame} imageSrc={this.props.currentSprite} />
 				</div>
 			</div>
 		);

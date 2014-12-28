@@ -25,10 +25,13 @@ var Sprite = React.createClass({
 	},
 
 	componentWillReceiveProps : function(nextProps){
+		var self = this;
 		if(nextProps.imageSrc !== this.props.imageSrc){
 			this.img = new Image();
 			this.img.src = nextProps.imageSrc;
-			this.img.onload = this.draw;
+			this.img.onload = function(){
+				self.draw();
+			}
 		}else{
 			this.draw(nextProps);
 		}

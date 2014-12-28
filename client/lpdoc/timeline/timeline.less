@@ -39,8 +39,8 @@
 		height         : 1.3em;
 		margin-top     : -21px;
 		padding-bottom : 5px;
-		padding-left   : 5px;
-		font-size      : 0.8em;
+		padding-left   : 20px;
+		font-size      : 1.3em;
 		color          : white;
 		border-bottom  : 6px solid white;
 		&:first-child{
@@ -54,16 +54,11 @@
 		}
 		*/
 	}
-	.item{
-		.transform(translateY(-50%) translateX(-50%));
+	.itemIcon{
 		position    : absolute;
 		left        : 50%;
 		z-index     : @markerIndex;
-		font-size   : 4em;
-		text-shadow:
-		-3px -3px 0 white,
-		3px -3px 0 white,
-		-3px 3px 0 white,
-		3px 3px 0 white;
+		.transform(translateY(-50%) translateX(-50%));
 	}
+
 }

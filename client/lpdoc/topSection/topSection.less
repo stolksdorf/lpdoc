@@ -5,10 +5,10 @@
 	height           : @topSectionHeight;
 	width            : 100%;
 	&.night{
-		background-image: url('http://www.imgbase.info/images/safe-wallpapers/digital_art/pixelated/32883_pixelated_8bit_landscape.jpg');
+		background-image: url('/assets/lpdoc/topSection/night.jpg');
 	}
 	&.day{
-		background-image: url('http://www.desktopbackgrounds.me/wp-content/uploads/2013/12/Sunny-8bit-Day.jpg');
+		background-image: url('/assets/lpdoc/topSection/day.jpg');
 	}
 	&.dawn, &.dusk{
 		background-image: url('/assets/lpdoc/topSection/dusk.png');
@@ -23,6 +23,32 @@
 		font-size: 3em;
 		text-outline : 2px 2px white;
 		-webkit-text-stroke: 1px white;
+
+	}
+	.subtitle{
+
+	}
+
+	.topPercentage{
+
+		bottom: 10px;
+		left : 50%;
+		position: absolute;
+		z-index : @playerIndex + 5;
+		text-align: center;
+		.transform(translateX(-45px));
+
+		div{
+			font-size : 4em;
+			position: absolute;
+			top : 45%;
+			left : 50%;
+			.transform(translateY(-50%) translateX(-50%));
+
+		}
+		img{
+			width : 150px;
+		}
 
 	}
 

@@ -28,37 +28,19 @@ body{
 
 
 
-
-	.PACHOW{
+	.percentage{
 		position: fixed;
-		z-index : 9001;
-		display: none;
-		.transform(translateX(-50%) translateY(-50%));
-		&.show{
-			display: block;
-		}
-		pointer-events:none;
-		.unselectable();
+		bottom: 10px;
+		left :220px;
+		z-index : @itemBarIndex;
+
+		font-size : 2.5em;
+
+		color : white;
 
 	}
-}
 
-.fade-enter {
-	opacity: 0.01;
-	transition: opacity .25s ease-in;
-}
 
-.fade-enter.fade-enter-active {
-	opacity: 1;
-}
-
-.fade-leave {
-	opacity: 1;
-	transition: opacity .25s ease-in;
-}
-
-.fade-leave.fade-leave-active {
-	opacity: 0.01;
 }
 
 
@@ -92,6 +74,26 @@ body{
 	background: -o-linear-gradient(@startColor @stop1, @endColor @stop2);
 	background: linear-gradient(@startColor @stop1, @endColor @stop2);
 }
+
+.fade-enter {
+	opacity: 0.01;
+	transition: opacity .25s ease-in;
+}
+
+.fade-enter.fade-enter-active {
+	opacity: 1;
+}
+
+.fade-leave {
+	opacity: 1;
+	transition: opacity .25s ease-in;
+}
+
+.fade-leave.fade-leave-active {
+	opacity: 0.01;
+}
+
+
 
 
 //Animation Maker

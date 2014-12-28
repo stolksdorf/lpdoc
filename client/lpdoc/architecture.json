@@ -7,11 +7,8 @@
 	],
 	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\topSection\\topSection.jsx": [
 		"react",
-		"underscore"
-	],
-	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\timeline\\timeline.jsx": [
-		"react",
-		"underscore"
+		"underscore",
+		"moment"
 	],
 	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\player\\sprite\\sprite.jsx": [
 		"react",
@@ -20,7 +17,17 @@
 	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\player\\player.jsx": [
 		"react",
 		"underscore",
+		"../itemIcon/itemIcon.jsx",
 		"./sprite/sprite.jsx"
+	],
+	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\itemIcon\\itemIcon.jsx": [
+		"react",
+		"underscore"
+	],
+	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\timeline\\timeline.jsx": [
+		"react",
+		"underscore",
+		"../itemIcon/itemIcon.jsx"
 	],
 	"./client/lpdoc/lpdoc.jsx": [
 		"react",
@@ -28,7 +35,7 @@
 		"jquery",
 		"./itemBar/itemBar.jsx",
 		"./topSection/topSection.jsx",
-		"./timeline/timeline.jsx",
-		"./player/player.jsx"
+		"./player/player.jsx",
+		"./timeline/timeline.jsx"
 	]
 }

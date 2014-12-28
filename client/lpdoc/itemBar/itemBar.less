@@ -4,34 +4,46 @@
 	right    : 25px;
 	bottom   : 0px;
 	z-index  : @itemBarIndex;
-	width    : 250px;
+	width    : 400px;
 	.descriptionBox{
-
+		position : relative;
+		box-sizing       : border-box;
 		width            : 100%;
 		margin           : 10px;
-		padding          : 10px;
+		padding          : 15px;
 		background-color : white;
 		border           : 5px solid black;
-		box-sizing: border-box;
+		.itemName{
+			margin-bottom: 10px;
+		}
+		.itemDate{
+			position : absolute;
+			top : 3px;
+			right : 10px;
+			font-size : 0.6em;
 
+		}
+		.itemDescription{
+			font-size : 0.7em;
+		}
 	}
 	.itemBar{
-		height           : 100px;
+		box-sizing       : border-box;
+		min-height       : 100px;
 		width            : 100%;
 		margin           : 10px;
 		padding          : 10px;
 		background-color : white;
 		border           : 5px solid black;
-		box-sizing: border-box;
-
-		&.standard{
-		}
 		&.mini{
+			.item{
+				font-size : 1.25em;
+			}
 		}
 		&.super_mini{
 		}
 		.itemTitle{
-			font-size : 0.5em;
+			font-size : 0.7em;
 		}
 		.item{
 			display   : inline-block;

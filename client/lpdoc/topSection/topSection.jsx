@@ -2,7 +2,7 @@
 var React = require('react');
 var _ = require('underscore');
 var cx = React.addons.classSet;
-
+var Moment = require('moment');
 
 var getTimeOfDay = function(){
 	var hour = (new Date).getHours();
@@ -26,7 +26,6 @@ var TopSection = React.createClass({
 		};
 	},
 
-/*
 	componentDidMount: function() {
 		var self = this;
 		setInterval(function(){
@@ -35,9 +34,12 @@ var TopSection = React.createClass({
 			})
 		}, 100);
 	},
-*/
+
 	render : function(){
 		var self = this;
+		var config = this.props.config;
+		var percentage = (Moment().diff(config.start, 'days')) / ( config.end.diff(config.start, 'days'));
+
 		return(
 			<div className={'topSection ' + getTimeOfDay() }
 				 style={{'background-position-x' : this.state.backgroundPosition}}>
@@ -45,19 +47,17 @@ var TopSection = React.createClass({
 					<div>Scroll to start her adventure</div>
 					<img className='downArrow' src='/assets/lpdoc/topSection/down_arrow.png' />
 				</div>
-
-
 				<div className='title'>
 					How Much is LP a Doctor?
 				</div>
 				<div className='subtitle'>
 					An Interactive adventure!
 				</div>
-
-
+				<div className='topPercentage'>
+					<div>{Math.round(percentage * 10000) / 100}%</div>
+					<img src='/assets/lpdoc/sparkle.gif' />
+				</div>
 				<div className='bottomGradient'></div>
-
-
 			</div>
 		);
 	}
