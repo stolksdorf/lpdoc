@@ -3,7 +3,7 @@ var app = express();
 var fs = require('fs');
 app.use(express.static(__dirname + '/build'));
 
-app.get("*", function (req, res) {
+app.get("/", function (req, res) {
 	return res.send(fs.readFileSync('./build/lpdoc/index.html', 'utf8'));
 });
 

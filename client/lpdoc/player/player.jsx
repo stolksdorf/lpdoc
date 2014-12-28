@@ -41,9 +41,8 @@ var Player = React.createClass({
 		}
 		if(this.props.scroll === 0){
 			frame = 8;
-
 			//fix
-			this.props.currentSprite = 'assets/lpdoc/player/sprite/white_coat.png';
+			this.props.currentSprite = this.props.config.lastSprite;
 		}
 
 		return(

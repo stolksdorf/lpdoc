@@ -40,8 +40,6 @@ var lpdoc = React.createClass({
 			if(event.lp_sprite) config.lastSprite = sprites[event.lp_sprite];
 			return event;
 		});
-
-		console.log(config);
 		return config;
 	},
 
