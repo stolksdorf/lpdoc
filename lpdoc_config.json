@@ -1,0 +1,128 @@
+{
+	"start" : "Aug 27th, 2014",
+	"end"   : "Sept 2nd, 2017",
+
+	"dayPixelRatio" : 500,
+	"events" : [
+		{
+			"name" : "MacMed Formal",
+			"desc" : "Such new friends. Much Excite.",
+			"date" : "Aug 29th, 2014",
+			"icon" : "fa-female",
+
+			"lp_sprite" : "base"
+		},
+		{
+			"name" : "Classes Start",
+			"desc" : "The Journey Begins.",
+			"date" : "Sept 2nd, 2014",
+			"icon" : "fa-university "
+		},
+		{
+			"name" : "Access Card Get!",
+			"desc" : "Opens all the doctor-doors. +10 Doctor Points.",
+			"date" : "Sept 4th, 2014",
+			"icon" : "fa-credit-card"
+		},
+		{
+			"name" : "Touched first thoracic cage",
+			"desc" : "Seriously, got all up in there. +25 Doctor Points.",
+			"date" : "Sept 10th, 2014",
+			"icon" : "fa-hospital-o"
+		},
+		{
+			"name" : "Jared and Megan's Wedding",
+			"desc" : "Cut the rug so hard.",
+			"date" : "Sept 14th, 2014",
+			"icon" : "fa-camera-retro"
+		},
+		{
+			"name" : "Stethoscope Get!",
+			"desc" : "So stylish. So med school. +50 Doctor points.",
+			"date" : "Sept 16th, 2014",
+			"icon" : "fa-stethoscope"
+		},
+		{
+			"name" : "White Coat Get!",
+			"desc" : "Basically a Doctor now. +40 Doctor Points.",
+			"date" : "Sept 30th, 2014",
+			"icon" : "fa-user-md",
+
+			"lp_sprite" : "white_coat"
+		},
+		{
+			"name" : "Autumnal Adventure day!",
+			"desc" : "An amazing Maize maze.",
+			"date" : "Oct 13th, 2014",
+			"icon" : "fa-picture-o"
+		},
+		{
+			"name" : "First Heart Dissection",
+			"desc" : "It was a pig heart, but still. +15 Doctor Points.",
+			"date" : "Oct 15th, 2014",
+			"icon" : "fa-heart"
+		},
+		{
+			"name" : "Hair Cut!",
+			"desc" : "Kara Thrace-style. +5 Aerodynamic points.",
+			"date" : "Oct 21st, 2014",
+			"icon" : "fa-cut",
+
+			"lp_sprite" : "short_hair"
+		},
+		{
+			"name" : "Water polo goalie",
+			"desc" : "They didn't lose!",
+			"date" : "Oct 29th, 2014",
+			"icon" : "fa-life-bouy"
+		},
+		{
+			"name" : "Ontario medical student weekend",
+			"desc" : "So much learning. And sweet potato fries.",
+			"date" : "Nov 14th, 2014",
+			"icon" : "fa-h-square"
+		},
+		{
+			"name" : "Suture master",
+			"desc" : "Saved dozens of banana lives. +23 Doctor Points.",
+			"date" : "Nov 16th, 2014",
+			"icon" : "fa-medkit"
+		},
+		{
+			"name" : "Astronaut Meet!",
+			"desc" : "Desire for flight suit rocketed *heh*. +10 Space points.",
+			"date" : "Nov 20th, 2014",
+			"icon" : "fa-rocket"
+		},
+		{
+			"name" : "Tutorial group final dinner",
+			"desc" : "End of an era.",
+			"date" : "Nov 28th, 2014",
+			"icon" : "fa-cutlery"
+		},
+		{
+			"name" : "First DnD Session",
+			"desc" : "lvl 1 rouge FTW",
+			"date" : "Dec 7th, 2014",
+			"icon" : "fa-magic"
+		},
+		{
+			"name" : "First ER shift",
+			"desc" : "Detached Finger? Check. Spinal Trauma injury? Check. Flushed out wounds? Check. +64*3 Doctor Points.",
+			"date" : "Dec 18th, 2014",
+			"icon" : "fa-ambulance"
+		},
+		{
+			"name" : "Birthday!!!",
+			"desc" : "Blurp Blurp Blorp Blorp Blop.",
+			"date" : "Dec 23rd, 2014",
+			"icon" : "fa-birthday-cake"
+		},
+		{
+			"name" : "Gift Get!!!!",
+			"desc" : "Scott gets +89,004 Boyfriend points.",
+			"date" : "Dec 29th, 2014",
+			"icon" : "fa-gift"
+		}
+	]
+}
