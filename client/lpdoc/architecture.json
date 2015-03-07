@@ -1,23 +1,23 @@
 {
 	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\node_modules\\recoil\\node_modules\\browserify\\lib\\_empty.js": [],
-	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\itemBar\\itemBar.jsx": [
-		"react",
-		"underscore",
-		"jquery"
-	],
 	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\topSection\\topSection.jsx": [
 		"react",
 		"underscore",
 		"moment"
 	],
-	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\itemIcon\\itemIcon.jsx": [
+	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\itemBar\\itemBar.jsx": [
 		"react",
-		"underscore"
+		"underscore",
+		"jquery"
 	],
 	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\timeline\\timeline.jsx": [
 		"react",
 		"underscore",
 		"../itemIcon/itemIcon.jsx"
+	],
+	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\itemIcon\\itemIcon.jsx": [
+		"react",
+		"underscore"
 	],
 	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\player\\sprite\\sprite.jsx": [
 		"react",
@@ -33,8 +33,8 @@
 		"react",
 		"underscore",
 		"jquery",
-		"./itemBar/itemBar.jsx",
 		"./topSection/topSection.jsx",
+		"./itemBar/itemBar.jsx",
 		"./timeline/timeline.jsx",
 		"./player/player.jsx"
 	]

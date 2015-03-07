@@ -71,7 +71,7 @@ var lpdoc = React.createClass({
 
 	componentDidMount: function() {
 		var self = this;
-		$.getJSON('https://gist.githubusercontent.com/stolksdorf/97634271d3b7d0ccda4a/raw', function(config){
+		$.getJSON('https://rawgit.com/stolksdorf/lpdoc/master/lpdoc_config.json', function(config){
 			self.update(0, self.processConfig(config))
 		})
 
