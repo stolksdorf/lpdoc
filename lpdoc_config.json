@@ -125,6 +125,12 @@
 			"icon" : "fa-gift"
 		},
 		{
+			"name" : "First OR Scrub-In",
+			"desc" : "Full scrubs and first sutures!",
+			"date" : "Mar 6th, 2015",
+			"icon" : "fa-sliders"
+		},
+		{
 			"name" : "Update!",
 			"desc" : "Scott finally updated this to let me add events.",
 			"date" : "Mar 7th, 2015",
