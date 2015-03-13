@@ -84,7 +84,7 @@
 		},
 		{
 			"name" : "Water polo goalie",
-			"desc" : "They didn't lose!",
+			"desc" : "We didn't lose!",
 			"date" : "Oct 29th, 2014",
 			"icon" : "fa-life-bouy"
 		},
@@ -143,10 +143,34 @@
 			"icon" : "fa-check-square-o"
 		},
 		{
+			"name" : "Diabetes Clinic Elective",
+			"desc" : "Became very acutely aware of my blood sugars. +10 Doctor points.",
+			"date" : "Jan 12th, 2015",
+			"icon" : "fa-user-md"
+		},
+		{
+			"name" : "First Overnight Peds ER Shift!",
+			"desc" : "The cutest pyjamas!",
+			"date" : "Jan 27th, 2015",
+			"icon" : "fa-medkit"
+		},
+		{
+			"name" : "Otolaryngology Elective",
+			"desc" : "Ear tubes! +10 Doctor points.",
+			"date" : "Feb 9th, 2015",
+			"icon" : "fa-medkit"
+		},
+		{
 			"name" : "Endocrinology Unit Complete!",
 			"desc" : "Hormones - check. +30 Doctor points.",
 			"date" : "Feb 13th, 2015",
 			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "First Plastics Elective",
+			"desc" : "Carpal tunnel releases! +10 Doctor Points.",
+			"date" : "Feb 26th, 2015",
+			"icon" : "fa-medkit"
 		},
 		{
 			"name" : "Operating Room: Scrub-In",
