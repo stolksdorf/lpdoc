@@ -77,6 +77,12 @@
 			"lp_sprite" : "short_hair"
 		},
 		{
+			"name" : "Cardiology Unit Conquered!",
+			"desc" : "Heart - check. +30 Doctor points.",
+			"date" : "Oct 24th, 2014",
+			"icon" : "fa-check-square-o"
+		},
+		{
 			"name" : "Water polo goalie",
 			"desc" : "They didn't lose!",
 			"date" : "Oct 29th, 2014",
@@ -101,10 +107,10 @@
 			"icon" : "fa-rocket"
 		},
 		{
-			"name" : "Tutorial group final dinner",
-			"desc" : "End of an era.",
+			"name" : "Hematology Unit Conquered!",
+			"desc" : "Blood - check. +30 Doctor points.",
 			"date" : "Nov 28th, 2014",
-			"icon" : "fa-cutlery"
+			"icon" : "fa-check-square-o"
 		},
 		{
 			"name" : "First DnD Session",
