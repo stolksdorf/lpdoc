@@ -43,7 +43,7 @@
 			"icon" : "fa-stethoscope"
 		},
 		{
-			"name" : "Respirology Unit Conquered!",
+			"name" : "Respirology Unit Complete!",
 			"desc" : "Lungs - check. +30 Doctor Points.",
 			"date" : "Sept 29th, 2014",
 			"icon" : "fa-check-square-o"
@@ -77,7 +77,7 @@
 			"lp_sprite" : "short_hair"
 		},
 		{
-			"name" : "Cardiology Unit Conquered!",
+			"name" : "Cardiology Unit Complete!",
 			"desc" : "Heart - check. +30 Doctor points.",
 			"date" : "Oct 24th, 2014",
 			"icon" : "fa-check-square-o"
@@ -107,7 +107,7 @@
 			"icon" : "fa-rocket"
 		},
 		{
-			"name" : "Hematology Unit Conquered!",
+			"name" : "Hematology Unit Complete!",
 			"desc" : "Blood - check. +30 Doctor points.",
 			"date" : "Nov 28th, 2014",
 			"icon" : "fa-check-square-o"
@@ -137,16 +137,28 @@
 			"icon" : "fa-gift"
 		},
 		{
+			"name" : "GI and Nutrition Unit Complete!",
+			"desc" : "Digestion - check. +30 Doctor points.",
+			"date" : "Jan 9th, 2015",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Endocrinology Unit Complete!",
+			"desc" : "Hormones - check. +30 Doctor points.",
+			"date" : "Feb 13th, 2015",
+			"icon" : "fa-check-square-o"
+		},
+		{
 			"name" : "Operating Room: Scrub-In",
 			"desc" : "Very, very clean forearms for my first sutures!",
 			"date" : "Mar 6th, 2015",
 			"icon" : "fa-sliders"
 		},
 		{
-			"name" : "Update!",
-			"desc" : "Scott finally updated this to let me add events.",
-			"date" : "Mar 7th, 2015",
-			"icon" : "fa-code"
+			"name" : "Renal Unit Complete!",
+			"desc" : "Kidneys - check. +30 Doctor Points.",
+			"date" : "Mar 13th, 2015",
+			"icon" : "fa-check-square-o"
 		}
 	]
 }
