@@ -43,6 +43,14 @@
 			"icon" : "fa-stethoscope"
 		},
 		{
+			"name" : "Respirology Unit Conquered!",
+			"desc" : "Lungs - check. +30 Doctor Points.",
+			"date" : "Sept 30th, 2014",
+			"icon" : "fa-check-square-o",
+
+			"lp_sprite" : "white_coat"
+		},
+		{
 			"name" : "White Coat Get!",
 			"desc" : "Basically a Doctor now. +40 Doctor Points.",
 			"date" : "Sept 30th, 2014",
