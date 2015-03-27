@@ -183,6 +183,12 @@
 			"desc" : "Kidneys - check. +30 Doctor Points.",
 			"date" : "Mar 13th, 2015",
 			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "First Obstetrics Elective",
+			"desc" : "C-section and a beautiful baby girl! +10 Doctor Points.",
+			"date" : "Mar 26th, 2015",
+			"icon" : "fa-user-plus"
 		}
 	]
 }
