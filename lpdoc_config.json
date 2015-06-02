@@ -188,7 +188,85 @@
 			"name" : "First Obstetrics Elective",
 			"desc" : "C-section and a beautiful baby girl! +10 Doctor Points.",
 			"date" : "Mar 26th, 2015",
-			"icon" : "fa-user-plus"
+			"icon" : "fa-medkit"
+		},
+		{
+			"name" : "MMI Host",
+			"desc" : "Much less stressful from this side!",
+			"date" : "Mar 28th, 2015",
+			"icon" : "fa-refresh"
+		},
+		{
+			"name" : "Urology Elective",
+			"desc" : "Kidney transplant and cystoscopies! +10 Doctor Points.",
+			"date" : "Apr 1st, 2015",
+			"icon" : "fa-medkit"
+		},
+		{
+			"name" : "Medical Oncology Elective",
+			"desc" : "CNS tumour clinic - team care planning! +10 Doctor Points.",
+			"date" : "Apr 16th, 2015",
+			"icon" : "fa-medkit"
+		},
+		{
+			"name" : "Reproduction Unit Complete!",
+			"desc" : "Fertility - check. +30 Doctor Points.",
+			"date" : "Apr 17th, 2015",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "FOAM Rating Study",
+			"desc" : "Participated in study rating medical blogs. +10 Doctor Points.",
+			"date" : "Apr 20th, 2015",
+			"icon" : "fa-rss"
+		},
+		{
+			"name" : "Radiation Oncology Elective",
+			"desc" : "CNS tumour clinic and radiation planning. +10 Doctor Points.",
+			"date" : "Apr 23th, 2015",
+			"icon" : "fa-medkit"
+		},
+		{
+			"name" : "MacMEDucation",
+			"desc" : "Taught appendicitis work-up at two-weekend workshop for high school students! +20 Doctor Points.",
+			"date" : "Apr 26th, 2015",
+			"icon" : "fa-users"
+		},
+		{
+			"name" : "MacMEDucation",
+			"desc" : "Taught thyroid exam at two-weekend workshop for high school students! +20 Doctor Points.",
+			"date" : "May 2nd, 2015",
+			"icon" : "fa-users"
+		},
+		{
+			"name" : "Camp Ooch Fundraiser Run",
+			"desc" : "Ran 10km in 58 minutes from Yonge and Lawrence to Fort York in Toronto",
+			"date" : "May 10th, 2015",
+			"icon" : "fa-rocket"
+		},
+		{
+			"name" : "Dermatology Elective",
+			"desc" : "Wear lots of sunscreen. +10 Doctor Points.",
+			"date" : "May 14th, 2015",
+			"icon" : "fa-medkit"
+		},
+		{
+			"name" : "Immunology Unit Complete!",
+			"desc" : "Antibodies - check. +30 Doctor Points.",
+			"date" : "May 15th, 2015",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Dermatological and Surgical Skills Workshop",
+			"desc" : "Suturing, excision and punch biopsy practise! +10 Doctor Points.",
+			"date" : "May 23rd, 2015",
+			"icon" : "fa-sliders"
+		},
+		{
+			"name" : "Child Psych Outpatient Elective",
+			"desc" : "First psych elective! +10 Doctor Points.",
+			"date" : "May 28th, 2015",
+			"icon" : "fa-medkit"
 		}
 	]
 }
