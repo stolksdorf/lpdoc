@@ -15,7 +15,8 @@ var sprites = {
 	base             : 'assets/lpdoc/player/sprite/base.png',
 	white_coat       : 'assets/lpdoc/player/sprite/white_coat.png',
 	white_coat_scope : 'assets/lpdoc/player/sprite/white_coat_scope.png',
-	short_hair       : 'assets/lpdoc/player/sprite/short_hair.png'
+	short_hair       : 'assets/lpdoc/player/sprite/short_hair.png',
+	shave_hair       : 'assets/lpdoc/player/sprite/shave_hair.png'
 };
 
 
@@ -37,7 +38,10 @@ var lpdoc = React.createClass({
 		config.lastSprite = sprites.base;
 		config.events = _.map(config.events, function(event){
 			event.date = moment(event.date, "MMM Do, YYYY");
-			if(event.lp_sprite) config.lastSprite = sprites[event.lp_sprite];
+			if(event.lp_sprite){
+				config.lastSprite = sprites[event.lp_sprite];
+				console.log('sprite', config.lastSprite);
+			}
 			return event;
 		});
 		return config;
@@ -85,6 +89,8 @@ var lpdoc = React.createClass({
 
 		//Don't load anything if we don't have the config
 		if(!this.state.config) return <noscript />
+
+		console.log('TEST',this.state.config);
 
 		var percentage;
 		if(this.state.scroll !== 0){
