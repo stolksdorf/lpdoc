@@ -152,7 +152,9 @@
 			"name" : "First Overnight Peds ER Shift!",
 			"desc" : "The cutest pyjamas!",
 			"date" : "Jan 27th, 2015",
-			"icon" : "fa-medkit"
+			"icon" : "fa-medkit",
+			
+			"lp_sprite" : "shave_hair"
 		},
 		{
 			"name" : "Otolaryngology Elective",
