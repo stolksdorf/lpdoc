@@ -2,13 +2,13 @@
 	"start" : "Aug 27th, 2014",
 	"end"   : "Sept 2nd, 2017",
 
-	"dayPixelRatio" : 500,
+	"dayPixelRatio" : 350,
 	"events" : [
 		{
 			"name" : "MacMed Formal",
 			"desc" : "Such new friends. Much Excite.",
 			"date" : "Aug 29th, 2014",
-			"icon" : "fa-female",
+			"icon" : "fa-glass",
 
 			"lp_sprite" : "base"
 		},
@@ -122,7 +122,7 @@
 			"name" : "First ER shift",
 			"desc" : "Detached Finger? Check. Spinal Trauma injury? Check. Flushed out wounds? Check. +64*3 Doctor Points.",
 			"date" : "Dec 18th, 2014",
-			"icon" : "fa-ambulance"
+			"icon" : "fa-medkit"
 		},
 		{
 			"name" : "Birthday!!!",
@@ -267,6 +267,48 @@
 			"desc" : "First psych elective! +10 Doctor Points.",
 			"date" : "May 28th, 2015",
 			"icon" : "fa-medkit"
+		},
+		{
+			"name" : "Mac Med Formal",
+			"desc" : "Basically done first year! +10 Doctor Points.",
+			"date" : "June 5th, 2015",
+			"icon" : "fa-glass"
+		},
+		{
+			"name" : "First OSCE",
+			"desc" : "How many different exams can you do in an hour? +10 Doctor Points.",
+			"date" : "June 16th, 2015",
+			"icon" : "fa-graduation-cap"
+		},
+		{
+			"name" : "Oncology Unit Complete",
+			"desc" : "Tumor suppressor genes - check. +30 Doctor Points.",
+			"date" : "June 26th, 2015",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Post MF4 Electives Start",
+			"desc" : "Scrubs, stethoscope and clipboard at the ready. +10 Doctor Points.",
+			"date" : "June 29th, 2015",
+			"icon" : "fa-user-md"
+		},
+		{
+			"name" : "Rural Family + ER Elective Complete",
+			"desc" : "Fergus + Elora for 4 weeks! +10 Doctor Points.",
+			"date" : "July 24th, 2015",
+			"icon" : "fa-trophy"
+		},
+		{
+			"name" : "Cottage Adventure Week",
+			"desc" : "Hiked 26km in 2 days! +10 Adventure Points.",
+			"date" : "July 25th, 2015",
+			"icon" : "fa-tree"
+		},
+		{
+			"name" : "Medicine CTU Elective Complete",
+			"desc" : "Hamilton General Hospital for 2 weeks! +10 Doctor Points.",
+			"date" : "August 14th, 2015",
+			"icon" : "fa-trophy"
 		}
 	]
 }
