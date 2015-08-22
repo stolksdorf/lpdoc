@@ -40,7 +40,7 @@ var lpdoc = React.createClass({
 			event.date = moment(event.date, "MMM Do, YYYY");
 			if(event.lp_sprite){
 				config.lastSprite = sprites[event.lp_sprite];
-				console.log('sprite', config.lastSprite);
+				//console.log('sprite', config.lastSprite);
 			}
 			return event;
 		});
@@ -89,8 +89,6 @@ var lpdoc = React.createClass({
 
 		//Don't load anything if we don't have the config
 		if(!this.state.config) return <noscript />
-
-		console.log('TEST',this.state.config);
 
 		var percentage;
 		if(this.state.scroll !== 0){

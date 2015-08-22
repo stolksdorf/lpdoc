@@ -10,14 +10,14 @@
 		"underscore",
 		"moment"
 	],
+	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\itemIcon\\itemIcon.jsx": [
+		"react",
+		"underscore"
+	],
 	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\timeline\\timeline.jsx": [
 		"react",
 		"underscore",
 		"../itemIcon/itemIcon.jsx"
-	],
-	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\itemIcon\\itemIcon.jsx": [
-		"react",
-		"underscore"
 	],
 	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\player\\sprite\\sprite.jsx": [
 		"react",
