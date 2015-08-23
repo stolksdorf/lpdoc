@@ -311,6 +311,12 @@
 			"desc" : "Hamilton General Hospital for 2 weeks! +10 Doctor Points.",
 			"date" : "August 14th, 2015",
 			"icon" : "fa-trophy"
+		},
+		{
+			"name" : "In-patient Psychiatry Elective Complete",
+			"desc" : "Freeport Hospital in Kitchener for 1 week! +10 Doctor Points.",
+			"date" : "August 21st, 2015",
+			"icon" : "fa-trophy"
 		}
 	]
 }
