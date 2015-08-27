@@ -5,6 +5,10 @@
 		"underscore",
 		"jquery"
 	],
+	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\pointsBar\\pointsBar.jsx": [
+		"react",
+		"underscore"
+	],
 	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\topSection\\topSection.jsx": [
 		"react",
 		"underscore",
@@ -34,6 +38,7 @@
 		"underscore",
 		"jquery",
 		"./itemBar/itemBar.jsx",
+		"./pointsBar/pointsBar.jsx",
 		"./topSection/topSection.jsx",
 		"./timeline/timeline.jsx",
 		"./player/player.jsx"

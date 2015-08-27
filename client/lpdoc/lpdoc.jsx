@@ -8,6 +8,7 @@ var Player = require('./player/player.jsx');
 var ItemBar = require('./itemBar/itemBar.jsx');
 var Timeline = require('./timeline/timeline.jsx');
 var TopSection = require('./topSection/topSection.jsx');
+var PointsBar = require('./pointsBar/pointsBar.jsx');
 
 
 
@@ -84,6 +85,7 @@ var lpdoc = React.createClass({
 		});
 	},
 
+
 	render : function(){
 		var self = this;
 
@@ -126,6 +128,8 @@ var lpdoc = React.createClass({
 				<ItemBar items={this.state.itemsCollected}
 						 config={this.state.config}
 						 scroll={this.state.scroll}/>
+
+				<PointsBar items={this.state.itemsCollected} />
 
 				{percentage}
 			</div>
