@@ -23,7 +23,7 @@ var PointsBar = React.createClass({
 		});
 		return _.map(points, function(val, pointName){
 			return (
-				<div className='pointRow'>
+				<div className='pointRow' key={pointName}>
 					<label>{pointName}</label> {val}
 				</div>
 			);
