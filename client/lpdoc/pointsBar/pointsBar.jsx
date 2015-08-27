@@ -36,7 +36,7 @@ var PointsBar = React.createClass({
 		if(!points.length) return <noscript />;
 		return(
 			<div className='pointsBar'>
-				<div className='title'>points</div>
+				<div className='title'>points!</div>
 				{points}
 			</div>
 		);
