@@ -12,11 +12,12 @@ var PointsBar = React.createClass({
 	},
 
 	renderPoints : function(){
-		var pointsRegex = new RegExp(/[0-9]+ \w+ Points/);
+		var pointsRegex = new RegExp(/[0-9]+ \w+ points/);
 		var points = {};
 		var temp = _.each(this.props.items, function(item){
-			if(pointsRegex.test(item.desc)){
-				pointDesc = pointsRegex.exec(item.desc)[0].split(' ');
+			var desc = item.desc.toLowerCase();
+			if(pointsRegex.test(desc)){
+				pointDesc = pointsRegex.exec(desc)[0].split(' ');
 				points[pointDesc[1]] = points[pointDesc[1]] || 0;
 				points[pointDesc[1]] += pointDesc[0]*1;
 			}
