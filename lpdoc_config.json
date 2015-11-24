@@ -317,6 +317,42 @@
 			"desc" : "Freeport Hospital in Kitchener for 1 week! +10 Doctor Points.",
 			"date" : "August 21st, 2015",
 			"icon" : "fa-trophy"
+		},
+		{
+			"name" : "MSK Unit Complete",
+			"desc" : "Anatomy crash course - check. +30 Doctor Points.",
+			"date" : "September 21st, 2015",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Neurology Unit Complete",
+			"desc" : "Spinal tracts - check. +30 Doctor Points.",
+			"date" : "October 16th, 2015",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Brain & Behaviour Unit Complete",
+			"desc" : "DSM 5 - check. +30 Doctor Points.",
+			"date" : "November 16th, 2015",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "2nd Year OSCE",
+			"desc" : "How many more exams can you do in an hour? +30 Doctor Points.",
+			"date" : "November 17th, 2015",
+			"icon" : "fa-graduation-cap"
+		},
+		{
+			"name" : "Clerkship Tools Get!",
+			"desc" : "Pager and parking transponder! +5 Doctor Points.",
+			"date" : "November 19th, 2015",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "First Day of Clerkship!",
+			"desc" : "Light blue steam ftw! +10 Doctor Points.",
+			"date" : "November 23rd, 2015",
+			"icon" : "fa-check-square-o"
 		}
 	]
 }
