@@ -1,8 +1,8 @@
 {
 	"start" : "Aug 27th, 2014",
-	"end"   : "Sept 2nd, 2017",
+	"end"   : "May 5th, 2017",
 
-	"dayPixelRatio" : 350,
+	"dayPixelRatio" : 300,
 	"events" : [
 		{
 			"name" : "MacMed Formal",
@@ -352,7 +352,7 @@
 			"name" : "First Day of Clerkship!",
 			"desc" : "Light blue steam ftw! +10 Doctor Points.",
 			"date" : "November 23rd, 2015",
-			"icon" : "fa-check-square-o"
+			"icon" : "fa-rocket"
 		}
 	]
 }
