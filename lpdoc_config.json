@@ -395,6 +395,8 @@
 			"desc" : "St Joseph's Hospital in Hamilton for 2 weeks! +5 Doctor points.",
 			"date" : "February 28th, 2016",
 			"icon" : "fa-check-square-o"
+			
+			"lp_sprite" : "now_hair2"
 		},
 		{
 			"name" : "Adolescent Medicine Elective Complete",
