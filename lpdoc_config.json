@@ -6,7 +6,7 @@
 	"events" : [
 		{
 			"name" : "MacMed Formal",
-			"desc" : "Such new friends. Much Excite.",
+			"desc" : "Such new friends. +5 Team points",
 			"date" : "Aug 29th, 2014",
 			"icon" : "fa-glass",
 
@@ -32,13 +32,13 @@
 		},
 		{
 			"name" : "Respirology Unit Complete!",
-			"desc" : "Lungs - check. +10 Doctor Points.",
+			"desc" : "Lungs - check. +10 Doctor points.",
 			"date" : "Sept 29th, 2014",
 			"icon" : "fa-check-square-o"
 		},
 		{
 			"name" : "White Coat Get!",
-			"desc" : "Ready for the wards. +5 Doctor Points.",
+			"desc" : "Ready for the wards. +5 Doctor points.",
 			"date" : "Sept 30th, 2014",
 			"icon" : "fa-user-md",
 
@@ -46,7 +46,7 @@
 		},
 		{
 			"name" : "First Heart Dissection",
-			"desc" : "It was a pig heart, but still. +5 Doctor Points.",
+			"desc" : "It was a pig heart, but still. +5 Doctor points.",
 			"date" : "Oct 15th, 2014",
 			"icon" : "fa-heart"
 		},
@@ -96,7 +96,7 @@
 		},
 		{
 			"name" : "Do You Have the Right Stuff? Intro to spaceflight physiology",
-			"desc" : "Organized Aerospace & Dive Medicine Interest Group Event. +5 Leadership points",
+			"desc" : "Organized Aerospace and Dive Medicine Interest Group Event. +5 Leadership points",
 			"date" : "Dec 1st, 2014",
 			"icon" : "fa-rocket"
 		},
@@ -158,7 +158,7 @@
 		},
 		{
 			"name" : "Under Pressure: Respiratory Physiology, Depth & Altitude",
-			"desc" : "Organized Aerospace & Dive Medicine Interest Group Event. +5 Leadership points",
+			"desc" : "Organized Aerospace and Dive Medicine Interest Group Event. +5 Leadership points",
 			"date" : "March 11th, 2015",
 			"icon" : "fa-rocket"
 		},
@@ -373,13 +373,13 @@
 			"icon" : "fa-check-square-o"
 		},
 		{
-			"name" : "Public Health & Preventive Medicine Elective Complete",
+			"name" : "Public Health and Preventive Medicine Elective Complete",
 			"desc" : "BC CDC in Vancouver for 2 weeks! +5 Doctor points.",
 			"date" : "January 17th, 2016",
 			"icon" : "fa-check-square-o"
 		},
 		{
-			"name" : "Obstetrics & Gynecology Elective Complete",
+			"name" : "Obstetrics and Gynecology Elective Complete",
 			"desc" : "Victoria Hospital in London for 2 weeks! +5 Doctor points.",
 			"date" : "January 31st, 2016",
 			"icon" : "fa-check-square-o"
@@ -415,7 +415,7 @@
 			"icon" : "fa-rocket"
 		},
 		{
-			"name" : "Obstetrics & Gynecology Core Complete",
+			"name" : "Obstetrics and Gynecology Core Complete",
 			"desc" : "Brantford General Hospital in Brantford for 6 weeks! +5 Doctor points.",
 			"date" : "May 8th, 2016",
 			"icon" : "fa-check-square-o"
@@ -451,7 +451,7 @@
 			"icon" : "fa-check-square-o"
 		},
 		{
-			"name" : "Child & Adolescent Psychiatry Core Complete",
+			"name" : "Child and Adolescent Psychiatry Core Complete",
 			"desc" : "CAIP Grand River Hospital in Kitchener for 2 weeks! +5 Doctor points.",
 			"date" : "October 9th, 2016",
 			"icon" : "fa-check-square-o"
@@ -469,7 +469,7 @@
 			"icon" : "fa-check-square-o"
 		},
 		{
-			"name" : "Family Medicine with Emergency & Hospitalist Elective Complete",
+			"name" : "Family Medicine with Emergency and Hospitalist Elective Complete",
 			"desc" : "Baie Verte in Newfoundland for 2 weeks! +5 Doctor points.",
 			"date" : "December 4th, 2016",
 			"icon" : "fa-check-square-o"
@@ -481,7 +481,7 @@
 			"icon" : "fa-check-square-o"
 		},
 		{
-			"name" : "Physical Medicine & Rehabilitation Elective Complete",
+			"name" : "Physical Medicine and Rehabilitation Elective Complete",
 			"desc" : "GF Strong Centre in Vancouver for 2 weeks! +5 Doctor points.",
 			"date" : "January 15th, 2017",
 			"icon" : "fa-check-square-o"
