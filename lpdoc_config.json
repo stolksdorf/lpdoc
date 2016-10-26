@@ -19,58 +19,40 @@
 			"icon" : "fa-university "
 		},
 		{
-			"name" : "Access Card Get!",
-			"desc" : "Opens all the doctor-doors. +10 Doctor Points.",
-			"date" : "Sept 4th, 2014",
-			"icon" : "fa-credit-card"
-		},
-		{
-			"name" : "Touched first thoracic cage",
-			"desc" : "Seriously, got all up in there. +25 Doctor Points.",
+			"name" : "First anatomy class",
+			"desc" : "Learned about the thoracic cage! +5 Doctor Points.",
 			"date" : "Sept 10th, 2014",
 			"icon" : "fa-hospital-o"
 		},
 		{
-			"name" : "Jared and Megan's Wedding",
-			"desc" : "Cut the rug so hard.",
-			"date" : "Sept 14th, 2014",
-			"icon" : "fa-camera-retro"
-		},
-		{
 			"name" : "Stethoscope Get!",
-			"desc" : "So stylish. So med school. +50 Doctor points.",
+			"desc" : "So ready for med school. +5 Doctor points.",
 			"date" : "Sept 16th, 2014",
 			"icon" : "fa-stethoscope"
 		},
 		{
 			"name" : "Respirology Unit Complete!",
-			"desc" : "Lungs - check. +30 Doctor Points.",
+			"desc" : "Lungs - check. +10 Doctor Points.",
 			"date" : "Sept 29th, 2014",
 			"icon" : "fa-check-square-o"
 		},
 		{
 			"name" : "White Coat Get!",
-			"desc" : "Basically a Doctor now. +40 Doctor Points.",
+			"desc" : "Ready for the wards. +5 Doctor Points.",
 			"date" : "Sept 30th, 2014",
 			"icon" : "fa-user-md",
 
 			"lp_sprite" : "white_coat"
 		},
 		{
-			"name" : "Autumnal Adventure day!",
-			"desc" : "An amazing Maize maze.",
-			"date" : "Oct 13th, 2014",
-			"icon" : "fa-picture-o"
-		},
-		{
 			"name" : "First Heart Dissection",
-			"desc" : "It was a pig heart, but still. +15 Doctor Points.",
+			"desc" : "It was a pig heart, but still. +5 Doctor Points.",
 			"date" : "Oct 15th, 2014",
 			"icon" : "fa-heart"
 		},
 		{
-			"name" : "Hair Cut!",
-			"desc" : "Kara Thrace-style. +5 Aerodynamic points.",
+			"name" : "Hair Donation!",
+			"desc" : "Pediatrics Interest Group Event! +5 Team points.",
 			"date" : "Oct 21st, 2014",
 			"icon" : "fa-cut",
 
@@ -78,79 +60,67 @@
 		},
 		{
 			"name" : "Cardiology Unit Complete!",
-			"desc" : "Heart - check. +30 Doctor points.",
+			"desc" : "Heart - check. +10 Doctor points.",
 			"date" : "Oct 24th, 2014",
 			"icon" : "fa-check-square-o"
 		},
 		{
 			"name" : "Water polo goalie",
-			"desc" : "We didn't lose!",
+			"desc" : "Intramural innertube water polo - we didn't lose! +5 Team points",
 			"date" : "Oct 29th, 2014",
 			"icon" : "fa-life-bouy"
 		},
 		{
 			"name" : "Ontario medical student weekend",
-			"desc" : "So much learning. And sweet potato fries.",
+			"desc" : "So much learning in Niagara! +5 Team points",
 			"date" : "Nov 14th, 2014",
 			"icon" : "fa-h-square"
 		},
 		{
 			"name" : "Suture master",
-			"desc" : "Saved dozens of banana lives. +23 Doctor Points.",
+			"desc" : "Saved dozens of banana lives. +5 Doctor Points.",
 			"date" : "Nov 16th, 2014",
 			"icon" : "fa-medkit"
 		},
 		{
 			"name" : "Astronaut Meet!",
-			"desc" : "Desire for flight suit rocketed *heh*. +10 Space points.",
+			"desc" : "Learned about aerospace medicine! +5 Inquiry points.",
 			"date" : "Nov 20th, 2014",
 			"icon" : "fa-rocket"
 		},
 		{
 			"name" : "Hematology Unit Complete!",
-			"desc" : "Blood - check. +30 Doctor points.",
+			"desc" : "Blood - check. +10 Doctor points.",
 			"date" : "Nov 28th, 2014",
 			"icon" : "fa-check-square-o"
 		},
 		{
 			"name" : "First DnD Session",
-			"desc" : "lvl 1 rouge FTW",
+			"desc" : "lvl 1 rogue FTW. +5 Team points",
 			"date" : "Dec 7th, 2014",
 			"icon" : "fa-magic"
 		},
 		{
 			"name" : "First ER shift",
-			"desc" : "Detached Finger? Check. Spinal Trauma injury? Check. Flushed out wounds? Check. +64*3 Doctor Points.",
+			"desc" : "Detached Finger? Check. Spinal trauma injury? Check. +5 Doctor Points.",
 			"date" : "Dec 18th, 2014",
 			"icon" : "fa-medkit"
 		},
 		{
-			"name" : "Birthday!!!",
-			"desc" : "Blurp Blurp Blorp Blorp Blop.",
-			"date" : "Dec 23rd, 2014",
-			"icon" : "fa-birthday-cake"
-		},
-		{
-			"name" : "Gift Get!!!!",
-			"desc" : "Scott gets +89,004 Boyfriend points.",
-			"date" : "Dec 29th, 2014",
-			"icon" : "fa-gift"
-		},
-		{
-			"name" : "GI and Nutrition Unit Complete!",
-			"desc" : "Digestion - check. +30 Doctor points.",
+			"name" : "GI & Nutrition Unit Complete!",
+			"desc" : "Digestion - check. +10 Doctor points.",
 			"date" : "Jan 9th, 2015",
 			"icon" : "fa-check-square-o"
 		},
 		{
 			"name" : "Diabetes Clinic Elective",
-			"desc" : "Became very acutely aware of my blood sugars. +10 Doctor points.",
+			"desc" : "Became very acutely aware of my blood sugars. +5 Doctor points.",
 			"date" : "Jan 12th, 2015",
 			"icon" : "fa-user-md"
 		},
 		{
 			"name" : "First Overnight Peds ER Shift!",
-			"desc" : "The cutest pyjamas!",
+			"desc" : "The cutest pyjamas! +5 Doctor points",
 			"date" : "Jan 27th, 2015",
 			"icon" : "fa-medkit",
 			
@@ -158,199 +128,199 @@
 		},
 		{
 			"name" : "Otolaryngology Elective",
-			"desc" : "Ear tubes! +10 Doctor points.",
+			"desc" : "Ear tubes! +5 Doctor points.",
 			"date" : "Feb 9th, 2015",
 			"icon" : "fa-medkit"
 		},
 		{
 			"name" : "Endocrinology Unit Complete!",
-			"desc" : "Hormones - check. +30 Doctor points.",
+			"desc" : "Hormones - check. +10 Doctor points.",
 			"date" : "Feb 13th, 2015",
 			"icon" : "fa-check-square-o"
 		},
 		{
 			"name" : "First Plastics Elective",
-			"desc" : "Carpal tunnel releases! +10 Doctor Points.",
+			"desc" : "Carpal tunnel releases! +5 Doctor Points.",
 			"date" : "Feb 26th, 2015",
 			"icon" : "fa-medkit"
 		},
 		{
 			"name" : "Operating Room: Scrub-In",
-			"desc" : "Very, very clean forearms for my first sutures!",
+			"desc" : "First scrub and first close! +5 Doctor points",
 			"date" : "Mar 6th, 2015",
 			"icon" : "fa-sliders"
 		},
 		{
 			"name" : "Renal Unit Complete!",
-			"desc" : "Kidneys - check. +30 Doctor Points.",
+			"desc" : "Kidneys - check. +10 Doctor Points.",
 			"date" : "Mar 13th, 2015",
 			"icon" : "fa-check-square-o"
 		},
 		{
 			"name" : "First Obstetrics Elective",
-			"desc" : "C-section and a beautiful baby girl! +10 Doctor Points.",
+			"desc" : "C-section and a beautiful baby girl! +5 Doctor Points.",
 			"date" : "Mar 26th, 2015",
 			"icon" : "fa-medkit"
 		},
 		{
 			"name" : "MMI Host",
-			"desc" : "Much less stressful from this side!",
+			"desc" : "Much less stressful from this side! +5 Leadership points",
 			"date" : "Mar 28th, 2015",
 			"icon" : "fa-refresh"
 		},
 		{
 			"name" : "Urology Elective",
-			"desc" : "Kidney transplant and cystoscopies! +10 Doctor Points.",
+			"desc" : "Kidney transplant and cystoscopies! +5 Doctor Points.",
 			"date" : "Apr 1st, 2015",
 			"icon" : "fa-medkit"
 		},
 		{
 			"name" : "Medical Oncology Elective",
-			"desc" : "CNS tumour clinic - team care planning! +10 Doctor Points.",
+			"desc" : "CNS tumour clinic - team care planning! +5 Doctor Points.",
 			"date" : "Apr 16th, 2015",
 			"icon" : "fa-medkit"
 		},
 		{
 			"name" : "Reproduction Unit Complete!",
-			"desc" : "Fertility - check. +30 Doctor Points.",
+			"desc" : "Fertility - check. +10 Doctor Points.",
 			"date" : "Apr 17th, 2015",
 			"icon" : "fa-check-square-o"
 		},
 		{
 			"name" : "FOAM Rating Study",
-			"desc" : "Participated in study rating medical blogs. +10 Doctor Points.",
+			"desc" : "Rated blogs for medical education! +5 Inquiry Points.",
 			"date" : "Apr 20th, 2015",
 			"icon" : "fa-rss"
 		},
 		{
 			"name" : "Radiation Oncology Elective",
-			"desc" : "CNS tumour clinic and radiation planning. +10 Doctor Points.",
+			"desc" : "CNS tumour clinic and radiation planning. +5 Doctor Points.",
 			"date" : "Apr 23th, 2015",
 			"icon" : "fa-medkit"
 		},
 		{
 			"name" : "MacMEDucation",
-			"desc" : "Taught appendicitis work-up at two-weekend workshop for high school students! +20 Doctor Points.",
+			"desc" : "Taught appendicitis work-up at two-weekend workshop for high school students! +5 Leadership points.",
 			"date" : "Apr 26th, 2015",
 			"icon" : "fa-users"
 		},
 		{
 			"name" : "MacMEDucation",
-			"desc" : "Taught thyroid exam at two-weekend workshop for high school students! +20 Doctor Points.",
+			"desc" : "Taught thyroid exam at two-weekend workshop for high school students! +5 Leadership points.",
 			"date" : "May 2nd, 2015",
 			"icon" : "fa-users"
 		},
 		{
 			"name" : "Camp Ooch Fundraiser Run",
-			"desc" : "Ran 10km in 58 minutes from Yonge and Lawrence to Fort York in Toronto",
+			"desc" : "Ran 10km in 58 minutes while raising money for kids with cancer! +5 Team points",
 			"date" : "May 10th, 2015",
 			"icon" : "fa-rocket"
 		},
 		{
 			"name" : "Dermatology Elective",
-			"desc" : "Wear lots of sunscreen. +10 Doctor Points.",
+			"desc" : "Wear lots of sunscreen. +5 Doctor points.",
 			"date" : "May 14th, 2015",
 			"icon" : "fa-medkit"
 		},
 		{
 			"name" : "Immunology Unit Complete!",
-			"desc" : "Antibodies - check. +30 Doctor Points.",
+			"desc" : "Antibodies - check. +10 Doctor points.",
 			"date" : "May 15th, 2015",
 			"icon" : "fa-check-square-o"
 		},
 		{
 			"name" : "Dermatological and Surgical Skills Workshop",
-			"desc" : "Suturing, excision and punch biopsy practise! +10 Doctor Points.",
+			"desc" : "Suturing, excision and punch biopsy practise! +5 Doctor points.",
 			"date" : "May 23rd, 2015",
 			"icon" : "fa-sliders"
 		},
 		{
-			"name" : "Child Psych Outpatient Elective",
-			"desc" : "First psych elective! +10 Doctor Points.",
+			"name" : "Child Psychiatry Elective",
+			"desc" : "First psych elective! +5 Doctor points.",
 			"date" : "May 28th, 2015",
 			"icon" : "fa-medkit"
 		},
 		{
 			"name" : "Mac Med Formal",
-			"desc" : "Basically done first year! +10 Doctor Points.",
+			"desc" : "Basically done first year! +5 Team points.",
 			"date" : "June 5th, 2015",
 			"icon" : "fa-glass"
 		},
 		{
 			"name" : "First OSCE",
-			"desc" : "How many different exams can you do in an hour? +10 Doctor Points.",
+			"desc" : "How many different exams can you do in an hour? +5 Doctor points.",
 			"date" : "June 16th, 2015",
 			"icon" : "fa-graduation-cap"
 		},
 		{
 			"name" : "Oncology Unit Complete",
-			"desc" : "Tumor suppressor genes - check. +30 Doctor Points.",
+			"desc" : "Tumor suppressor genes - check. +10 Doctor points.",
 			"date" : "June 26th, 2015",
 			"icon" : "fa-check-square-o"
 		},
 		{
 			"name" : "Post MF4 Electives Start",
-			"desc" : "Scrubs, stethoscope and clipboard at the ready. +10 Doctor Points.",
+			"desc" : "Scrubs, stethoscope and clipboard at the ready. +5 Doctor points.",
 			"date" : "June 29th, 2015",
 			"icon" : "fa-user-md"
 		},
 		{
 			"name" : "Rural Family + ER Elective Complete",
-			"desc" : "Fergus + Elora for 4 weeks! +10 Doctor Points.",
+			"desc" : "Fergus + Elora for 4 weeks! +5 Doctor points.",
 			"date" : "July 24th, 2015",
 			"icon" : "fa-trophy"
 		},
 		{
 			"name" : "Cottage Adventure Week",
-			"desc" : "Hiked 26km in 2 days! +10 Adventure Points.",
+			"desc" : "Hiked 26km in 2 days! +5 Inquiry points.",
 			"date" : "July 25th, 2015",
 			"icon" : "fa-tree"
 		},
 		{
 			"name" : "Medicine CTU Elective Complete",
-			"desc" : "Hamilton General Hospital for 2 weeks! +10 Doctor Points.",
+			"desc" : "Hamilton General Hospital for 2 weeks! +5 Doctor points.",
 			"date" : "August 14th, 2015",
 			"icon" : "fa-trophy"
 		},
 		{
-			"name" : "In-patient Psychiatry Elective Complete",
-			"desc" : "Freeport Hospital in Kitchener for 1 week! +10 Doctor Points.",
+			"name" : "Specialized Mental Health Elective Complete",
+			"desc" : "Freeport Hospital in Kitchener for 1 week! +5 Doctor points.",
 			"date" : "August 21st, 2015",
 			"icon" : "fa-trophy"
 		},
 		{
 			"name" : "MSK Unit Complete",
-			"desc" : "Anatomy crash course - check. +30 Doctor Points.",
+			"desc" : "Anatomy crash course - check. +10 Doctor points.",
 			"date" : "September 21st, 2015",
 			"icon" : "fa-check-square-o"
 		},
 		{
 			"name" : "Neurology Unit Complete",
-			"desc" : "Spinal tracts - check. +30 Doctor Points.",
+			"desc" : "Spinal tracts - check. +10 Doctor points.",
 			"date" : "October 16th, 2015",
 			"icon" : "fa-check-square-o"
 		},
 		{
 			"name" : "Brain & Behaviour Unit Complete",
-			"desc" : "DSM 5 - check. +30 Doctor Points.",
+			"desc" : "DSM 5 - check. +10 Doctor points.",
 			"date" : "November 16th, 2015",
 			"icon" : "fa-check-square-o"
 		},
 		{
 			"name" : "2nd Year OSCE",
-			"desc" : "How many more exams can you do in an hour? +30 Doctor Points.",
+			"desc" : "How many more exams can you do in an hour? +5 Doctor Points.",
 			"date" : "November 17th, 2015",
 			"icon" : "fa-graduation-cap"
 		},
 		{
 			"name" : "Clerkship Tools Get!",
-			"desc" : "Pager and parking transponder! +5 Doctor Points.",
+			"desc" : "Pager and parking transponder! +5 Doctor points.",
 			"date" : "November 19th, 2015",
 			"icon" : "fa-check-square-o"
 		},
 		{
 			"name" : "First Day of Clerkship!",
-			"desc" : "Light blue steam ftw! +10 Doctor Points.",
+			"desc" : "Light blue steam - ready, set, go! +10 Doctor points.",
 			"date" : "November 23rd, 2015",
 			"icon" : "fa-rocket"
 		}
