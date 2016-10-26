@@ -323,6 +323,126 @@
 			"desc" : "Light blue steam - ready, set, go! +10 Doctor points.",
 			"date" : "November 23rd, 2015",
 			"icon" : "fa-rocket"
+		},
+		{
+			"name" : "Emergency Medicine Core Complete",
+			"desc" : "Hamilton Health Sciences for 4 weeks! +5 Doctor points.",
+			"date" : "December 20th, 2015",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Public Health & Preventive Medicine Elective Complete",
+			"desc" : "BC CDC in Vancouver for 2 weeks! +5 Doctor points.",
+			"date" : "January 17th, 2016",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Obstetrics & Gynecology Elective Complete",
+			"desc" : "Victoria Hospital in London for 2 weeks! +5 Doctor points.",
+			"date" : "January 31st, 2016",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Anesthesia Core Complete",
+			"desc" : "St Joseph's Hospital in Hamilton for 2 weeks! +5 Doctor points.",
+			"date" : "February 14th, 2016",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Orthopedics Core Complete",
+			"desc" : "St Joseph's Hospital in Hamilton for 2 weeks! +5 Doctor points.",
+			"date" : "February 28th, 2016",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Adolescent Medicine Elective Complete",
+			"desc" : "Sick Kids Hospital in Toronto for 2 weeks! +5 Doctor points.",
+			"date" : "March 13th, 2016",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Sports Medicine Elective Complete",
+			"desc" : "Waterloo Sports Medicine Centre in Waterloo for 2 weeks! +5 Doctor points.",
+			"date" : "March 27th, 2016",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Obstetrics & Gynecology Core Complete",
+			"desc" : "Brantford General Hospital in Brantford for 6 weeks! +5 Doctor points.",
+			"date" : "May 8th, 2016",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Pediatrics Community Core Complete",
+			"desc" : "Delhi Community Health Centre in Delhi for 4 weeks! +5 Doctor points.",
+			"date" : "June 5th, 2016",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Pediatrics CTU Core Complete",
+			"desc" : "McMaster Children's Hospital in Hamilton for 2 weeks! +5 Doctor points.",
+			"date" : "June 19th, 2016",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Family Medicine Core Complete",
+			"desc" : "Delhi Community Health Centre in Delhi for 6 weeks! +5 Doctor points.",
+			"date" : "July 31st, 2016",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Family Medicine with Obstetrics Elective Complete",
+			"desc" : "Alpine Medical Clinic in Banff for 2 weeks! +5 Doctor points.",
+			"date" : "August 14th, 2016",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Medicine CTU Core Complete",
+			"desc" : "St Joseph's Hospital in Hamilton for 6 weeks! +5 Doctor points.",
+			"date" : "September 25th, 2016",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Child & Adolescent Psychiatry Core Complete",
+			"desc" : "CAIP Grand River Hospital in Kitchener for 2 weeks! +5 Doctor points.",
+			"date" : "October 9th, 2016",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Adult Psychiatry Core Complete",
+			"desc" : "Specialized Mental Health Unit at Freeport Hospital for 4 weeks! +5 Doctor points.",
+			"date" : "November 6th, 2016",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Geriatrics Selective Core Complete",
+			"desc" : "Juravinski Hospital in Hamilton for 2 weeks! +5 Doctor points.",
+			"date" : "November 20th, 2016",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Family Medicine with Emergency & Hospitalist Elective Complete",
+			"desc" : "Baie Verte in Newfoundland for 2 weeks! +5 Doctor points.",
+			"date" : "December 4th, 2016",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Health of the Homeless Elective Complete",
+			"desc" : "Shelter Health Network in Hamilton for 2 weeks! +5 Doctor points.",
+			"date" : "December 18th, 2016",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Physical Medicine & Rehabilitation Elective Complete",
+			"desc" : "GF Strong Centre in Vancouver for 2 weeks! +5 Doctor points.",
+			"date" : "January 15th, 2017",
+			"icon" : "fa-check-square-o"
+		},
+		{
+			"name" : "Reading/Research Elective Complete",
+			"desc" : "Relative Energy Deficiency in Sports research for 1 week! +5 Doctor points.",
+			"date" : "January 29th, 2017",
+			"icon" : "fa-check-square-o"
 		}
 	]
 }
