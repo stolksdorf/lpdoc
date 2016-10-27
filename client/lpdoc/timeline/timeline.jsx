@@ -3,6 +3,8 @@ var React = require('react');
 var _ = require('lodash');
 var cx = require('classnames');
 
+var Moment = require('moment');
+
 
 var Item = require('../itemIcon/itemIcon.jsx');
 
@@ -31,22 +33,22 @@ var Timeline = React.createClass({
 
 
 
-		//console.log((moment().unix() -start.unix())/ (end.unix() - start.unix()));
+		//console.log((Moment().unix() -start.unix())/ (end.unix() - start.unix()));
 
 
-		var numDays = moment().diff(config.start, 'days') + 1;
+		var numDays = Moment().diff(config.start, 'days') + 1;
 
 
-		var markers = _.times(moment().diff(config.start, 'days') + 1, function(day){
+		var markers = _.times(Moment().diff(config.start, 'days') + 1, function(day){
 			return <div className='marker' key={day} style={{top: config.dayPixelRatio * day + TOP_OFFSET}}>
-				{moment(config.start).add(day, 'days').format('MMM Do')}
+				{Moment(config.start).add(day, 'days').format('MMM Do')}
 				</div>
 		});
 
 
 		var items = _.reduce(config.events, function(r, event){
 
-			var date = moment(event.date, "MMM Do, YYYY");
+			var date = Moment(event.date, "MMM Do, YYYY");
 
 
 			if(date.unix() > self.props.scrollDay.unix()){

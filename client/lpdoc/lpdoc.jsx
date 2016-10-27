@@ -2,7 +2,8 @@
 var React = require('react');
 var _ = require('lodash');
 var cx = require('classnames');
-var $ = require('jquery');
+
+var Moment = require('moment');
 
 var Player = require('./player/player.jsx');
 var ItemBar = require('./itemBar/itemBar.jsx');
@@ -24,21 +25,31 @@ var sprites = {
 
 
 var lpdoc = React.createClass({
+	getDefaultProps: function() {
+		return {
+			url : '',
+			config : {},
+			events : []
+		};
+	},
 
 	getInitialState: function() {
-		return {
-			config : null,
-			scroll: 0,
-		};
+		return this.getUpdatedState(0,
+			this.processConfig(this.props.config));
 	},
 
 	//Converts dates within the config to moment data structures
 	processConfig : function(config){
-		config.start = moment(config.start, "MMM Do, YYYY");
-		config.end = moment(config.end, "MMM Do, YYYY");
+
+		config.start = Moment(config.start, "MMM Do, YYYY");
+		config.end = Moment(config.end, "MMM Do, YYYY");
+
+		console.log('CORE', config.end.diff(config.start, 'days'));
+
+
 		config.lastSprite = sprites.base;
 		config.events = _.map(config.events, function(event){
-			event.date = moment(event.date, "MMM Do, YYYY");
+			event.date = Moment(event.date, "MMM Do, YYYY");
 			if(event.lp_sprite){
 				config.lastSprite = sprites[event.lp_sprite];
 				//console.log('sprite', config.lastSprite);
@@ -48,11 +59,11 @@ var lpdoc = React.createClass({
 		return config;
 	},
 
-	update : function(scroll, config){
+	getUpdatedState : function(scroll, config){
 		var config = config || this.state.config;
 
 		//update scroll, number of days passed, items collected, current item
-		var scrollDay = moment(config.start).add(Math.floor(scroll / config.dayPixelRatio), 'days');
+		var scrollDay = Moment(config.start).add(Math.floor(scroll / config.dayPixelRatio), 'days');
 		var currentItem, currentSprite = sprites.base;
 		var itemsCollected = _.reduce(config.events, function(r, event){
 			if(event.date.unix() <= scrollDay.unix()){
@@ -63,7 +74,7 @@ var lpdoc = React.createClass({
 			return r;
 		},[]);
 
-		this.setState({
+		return {
 			config : config,
 			scroll : scroll,
 			scrollDay : scrollDay,
@@ -71,18 +82,18 @@ var lpdoc = React.createClass({
 			currentItem : currentItem,
 			currentSprite : currentSprite,
 			percentage : (scroll / config.dayPixelRatio) / ( config.end.diff(config.start, 'days'))
-		});
+		};
 	},
 
-	componentDidMount: function() {
-		var self = this;
-		$.getJSON('https://rawgit.com/stolksdorf/lpdoc/master/lpdoc_config.json', function(config){
-			self.update(0, self.processConfig(config))
-		})
 
-		$(window).on('scroll', function(e) {
-			self.update(window.pageYOffset);
-		});
+
+
+	componentDidMount: function() {
+		console.log('mounting');
+	},
+
+	handleScroll : function(e){
+		this.setState(this.getUpdatedState(window.pageYOffset))
 	},
 
 
@@ -90,7 +101,7 @@ var lpdoc = React.createClass({
 		var self = this;
 
 		//Don't load anything if we don't have the config
-		if(!this.state.config) return <noscript />
+		//if(!this.state.config) return <noscript />
 
 		var percentage;
 		if(this.state.scroll !== 0){
@@ -102,7 +113,7 @@ var lpdoc = React.createClass({
 		}
 
 		return(
-			<div className='lpdoc'>
+			<div className='lpdoc' onScroll={this.handleScroll}>
 				<TopSection
 					config={this.state.config}
 					scroll={this.state.scroll}

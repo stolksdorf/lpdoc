@@ -27,22 +27,24 @@ var TopSection = React.createClass({
 	},
 
 	componentDidMount: function() {
-		var self = this;
-		setInterval(function(){
-			self.setState({
-				backgroundPosition : self.state.backgroundPosition + 1
-			})
-		}, 100);
 	},
 
 	render : function(){
-		var self = this;
 		var config = this.props.config;
 		var percentage = (Moment().diff(config.start, 'days')) / ( config.end.diff(config.start, 'days'));
 
+
+		console.log(config.start, config.end);
+
+		console.log(config.start.diff(config.end));
+
+		console.log( config.end.diff(config.start, 'day'));
+
+		console.log(Moment().diff(config.start, 'days'));
+		console.log(Moment().diff(Moment("11-10-2013 09:03 AM", "DD-MM-YYYY hh:mm A"), "minute"));
+
 		return(
-			<div className={'topSection ' + getTimeOfDay() }
-				 style={{'background-position-x' : this.state.backgroundPosition}}>
+			<div className={'topSection ' + getTimeOfDay() }>
 				<div className='startMessage'>
 					<div>Scroll to start her adventure</div>
 					<img className='downArrow' src='/assets/lpdoc/topSection/down_arrow.png' />

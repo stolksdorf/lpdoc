@@ -1,7 +1,7 @@
 
 var React = require('react');
 var _ = require('lodash');
-var $ = require('jquery');
+//var $ = require('jquery');
 var cx = require('classnames');
 
 var ItemBar = React.createClass({
@@ -28,9 +28,15 @@ var ItemBar = React.createClass({
 	clickItem : function(item){
 		var time = Math.abs(dateToPixel(item.date, this.props.config) - this.props.scroll) * 0.5;
 		if(time > 5000) time = 5000;
+
+		alert('clicked item!');
+
+		/*
 		$("html, body").animate({
 			scrollTop: dateToPixel(item.date, this.props.config)
 		}, time);
+
+		*/
 	},
 	selectItem : function(item){
 		this.setState({

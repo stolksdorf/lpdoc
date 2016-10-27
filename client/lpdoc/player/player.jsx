@@ -2,7 +2,7 @@
 var React = require('react');
 var _ = require('lodash');
 var cx = require('classnames');
-var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+//var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 var Sprite = require('./sprite/sprite.jsx');
 var ItemIcon = require('../itemIcon/itemIcon.jsx');
@@ -42,15 +42,15 @@ var Player = React.createClass({
 		if(this.props.scroll === 0){
 			frame = 8;
 			//fix
-			this.props.currentSprite = this.props.config.lastSprite;
+			//this.props.currentSprite = this.props.config.lastSprite;
 		}
 
 		return(
 			<div className='player'>
 				<div className='container'>
-					<ReactCSSTransitionGroup transitionName="fade">
+					{/*<ReactCSSTransitionGroup transitionName="fade">*/}
 						{itemBanner}
-					</ReactCSSTransitionGroup>
+					{/*</ReactCSSTransitionGroup>*/}
 					{hoverItem}
 					<Sprite frame={frame} imageSrc={this.props.currentSprite} />
 				</div>
