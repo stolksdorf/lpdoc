@@ -1,4 +1,4 @@
-
+/*
 var recoil = require("recoil");
 var gulp = require("gulp");
 
@@ -25,3 +25,37 @@ var gulp = recoil.tasks(gulp, {
 	},
 	libs: [],
 });
+
+*/
+
+var vitreumTasks = require("vitreum/tasks");
+var gulp = require("gulp");
+
+
+var gulp = vitreumTasks(gulp, {
+	entryPoints: [
+		'./client/lpdoc',
+	],
+
+	DEV: true,
+	buildPath: "./build/",
+	pageTemplate: "./client/template.dot",
+	projectModules: [],
+	additionalRequirePaths : ['./shared', './node_modules'],
+	assetExts: ["*.svg", "*.png", "*.jpg", "*.pdf", "*.eot", "*.otf", "*.woff", "*.woff2", "*.ico", "*.ttf"],
+	serverWatchPaths: ["server"],
+	serverScript: "server.js",
+	libs: [
+		"react",
+		"react-dom",
+		"lodash",
+		"classnames",
+		"moment",
+
+		//"superagent",
+		///"pico-router",
+		//"pico-flux"
+	],
+	clientLibs: [],
+});
+
