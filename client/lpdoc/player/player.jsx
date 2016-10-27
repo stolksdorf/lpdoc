@@ -1,7 +1,7 @@
-/** @jsx React.DOM */
+
 var React = require('react');
-var _ = require('underscore');
-var cx = React.addons.classSet;
+var _ = require('lodash');
+var cx = require('classnames');
 var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 var Sprite = require('./sprite/sprite.jsx');

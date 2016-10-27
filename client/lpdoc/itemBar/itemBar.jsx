@@ -1,8 +1,8 @@
-/** @jsx React.DOM */
+
 var React = require('react');
-var _ = require('underscore');
+var _ = require('lodash');
 var $ = require('jquery');
-var cx = React.addons.classSet;
+var cx = require('classnames');
 
 var ItemBar = React.createClass({
 	getInitialState: function() {
