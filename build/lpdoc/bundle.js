@@ -3,7 +3,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 /** @jsx React.DOM */
 var React = window.React;
 var _ = window._;
-var cx = React.addons.classSet;
+var cx = require('classnames');
 var $ = window.jQuery;
 
 var Player = require('./player/player.jsx');
@@ -97,41 +97,41 @@ var lpdoc = React.createClass({displayName: 'lpdoc',
 		var percentage;
 		if(this.state.scroll !== 0){
 			percentage = (
-				React.DOM.div({className: "percentage"}, 
+				React.DOM.div({className: "percentage"},
 					Math.round(this.state.percentage * 10000) / 100, "%"
 				)
 			);
 		}
 
 		return(
-			React.DOM.div({className: "lpdoc"}, 
+			React.DOM.div({className: "lpdoc"},
 				TopSection({
-					config: this.state.config, 
-					scroll: this.state.scroll, 
-					percentage: this.state.percentage}), 
+					config: this.state.config,
+					scroll: this.state.scroll,
+					percentage: this.state.percentage}),
 
 				Player({
-					currentSprite: this.state.currentSprite, 
-					currentItem: this.state.currentItem, 
-					config: this.state.config, 
-					scroll: this.state.scroll}), 
+					currentSprite: this.state.currentSprite,
+					currentItem: this.state.currentItem,
+					config: this.state.config,
+					scroll: this.state.scroll}),
 
 
 
 
 				Timeline({
-					itemsCollected: this.state.itemsCollected, 
-					currentItem: this.state.currentItem, 
-					scrollDay: this.state.scrollDay, 
-					config: this.state.config, 
-					scroll: this.state.scroll}), 
+					itemsCollected: this.state.itemsCollected,
+					currentItem: this.state.currentItem,
+					scrollDay: this.state.scrollDay,
+					config: this.state.config,
+					scroll: this.state.scroll}),
 
 
-				ItemBar({items: this.state.itemsCollected, 
-						 config: this.state.config, 
-						 scroll: this.state.scroll}), 
+				ItemBar({items: this.state.itemsCollected,
+						 config: this.state.config,
+						 scroll: this.state.scroll}),
 
-				PointsBar({items: this.state.itemsCollected}), 
+				PointsBar({items: this.state.itemsCollected}),
 
 				percentage
 			)
@@ -148,7 +148,7 @@ module.exports = lpdoc;
 var React = window.React;
 var _ = window._;
 var $ = window.jQuery;
-var cx = React.addons.classSet;
+var cx = require('classnames');
 
 var ItemBar = React.createClass({displayName: 'ItemBar',
 	getInitialState: function() {
@@ -195,10 +195,10 @@ var ItemBar = React.createClass({displayName: 'ItemBar',
 		if(this.state.items.length === 0) return React.DOM.noscript(null);
 
 		var items = _.map(this.state.items, function(item, index){
-			return React.DOM.div({className: "item", key: index, 
-						onClick: self.clickItem.bind(self, item), 
-						onMouseEnter: self.selectItem.bind(self, item), 
-						onMouseLeave: self.deselectItem.bind(self, item)}, 
+			return React.DOM.div({className: "item", key: index,
+						onClick: self.clickItem.bind(self, item),
+						onMouseEnter: self.selectItem.bind(self, item),
+						onMouseLeave: self.deselectItem.bind(self, item)},
 				React.DOM.i({className: 'fa fa-fw ' + item.icon})
 			)
 		});
@@ -211,19 +211,19 @@ var ItemBar = React.createClass({displayName: 'ItemBar',
 
 		var descriptionBox;
 		if(this.state.selectedItem){
-			descriptionBox = React.DOM.div({className: "descriptionBox"}, 
-				React.DOM.div({className: "itemName"}, this.state.selectedItem.name), 
-				React.DOM.div({className: "itemDate"}, this.state.selectedItem.date.format("MMM Do, YYYY")), 
+			descriptionBox = React.DOM.div({className: "descriptionBox"},
+				React.DOM.div({className: "itemName"}, this.state.selectedItem.name),
+				React.DOM.div({className: "itemDate"}, this.state.selectedItem.date.format("MMM Do, YYYY")),
 				React.DOM.div({className: "itemDescription"}, this.state.selectedItem.desc)
 			)
 		}
 
 
 		return(
-			React.DOM.div({className: "itemArea"}, 
-				descriptionBox, 
-				React.DOM.div({className: 'itemBar ' + zoomClass}, 
-					React.DOM.div({className: "itemTitle"}, "Items collected"), 
+			React.DOM.div({className: "itemArea"},
+				descriptionBox,
+				React.DOM.div({className: 'itemBar ' + zoomClass},
+					React.DOM.div({className: "itemTitle"}, "Items collected"),
 					items
 
 				)
@@ -244,7 +244,7 @@ var dateToPixel = function(date, config){
 /** @jsx React.DOM */
 var React = window.React;
 var _ = window._;
-var cx = React.addons.classSet;
+var cx = require('classnames');
 
 var ItemIcon = React.createClass({displayName: 'ItemIcon',
 
@@ -252,7 +252,7 @@ var ItemIcon = React.createClass({displayName: 'ItemIcon',
 		var self = this;
 		var item = this.props.item;
 		return(
-			React.DOM.div({className: "itemIcon", style: this.props.style}, 
+			React.DOM.div({className: "itemIcon", style: this.props.style},
 				React.DOM.i({className: "fa fa-fw " + item.icon})
 			)
 		);
@@ -266,7 +266,7 @@ module.exports = ItemIcon;
 /** @jsx React.DOM */
 var React = window.React;
 var _ = window._;
-var cx = React.addons.classSet;
+var cx = require('classnames');
 var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 var Sprite = require('./sprite/sprite.jsx');
@@ -292,14 +292,14 @@ var Player = React.createClass({displayName: 'Player',
 		if(this.props.currentItem){
 			frame = 8;
 			itemBanner = (
-				React.DOM.div({className: "itemBanner", key: this.props.currentItem.date}, 
-					React.DOM.div({className: "name"}, this.props.currentItem.name), 
+				React.DOM.div({className: "itemBanner", key: this.props.currentItem.date},
+					React.DOM.div({className: "name"}, this.props.currentItem.name),
 					React.DOM.div({className: "desc"}, this.props.currentItem.desc)
 				)
 			);
 			hoverItem = (
-				React.DOM.div({className: "hoverItem"}, 
-					ItemIcon({item: this.props.currentItem}), 
+				React.DOM.div({className: "hoverItem"},
+					ItemIcon({item: this.props.currentItem}),
 					React.DOM.img({src: "/assets/lpdoc/sparkle.gif"})
 				)
 			);
@@ -311,12 +311,12 @@ var Player = React.createClass({displayName: 'Player',
 		}
 
 		return(
-			React.DOM.div({className: "player"}, 
-				React.DOM.div({className: "container"}, 
-					ReactCSSTransitionGroup({transitionName: "fade"}, 
+			React.DOM.div({className: "player"},
+				React.DOM.div({className: "container"},
+					ReactCSSTransitionGroup({transitionName: "fade"},
 						itemBanner
-					), 
-					hoverItem, 
+					),
+					hoverItem,
 					Sprite({frame: frame, imageSrc: this.props.currentSprite})
 				)
 			)
@@ -331,7 +331,7 @@ module.exports = Player;
 /** @jsx React.DOM */
 var React = window.React;
 var _ = window._;
-var cx = React.addons.classSet;
+var cx = require('classnames');
 
 var Sprite = React.createClass({displayName: 'Sprite',
 	img : null,
@@ -385,7 +385,7 @@ var Sprite = React.createClass({displayName: 'Sprite',
 	render : function(){
 		var self = this;
 		return(
-			React.DOM.div({className: "sprite"}, 
+			React.DOM.div({className: "sprite"},
 				React.DOM.canvas({ref: "canvas"})
 			)
 		);
@@ -399,7 +399,7 @@ module.exports = Sprite;
 /** @jsx React.DOM */
 var React = window.React;
 var _ = window._;
-var cx = React.addons.classSet;
+var cx = require('classnames');
 
 var PointsBar = React.createClass({displayName: 'PointsBar',
 
@@ -422,7 +422,7 @@ var PointsBar = React.createClass({displayName: 'PointsBar',
 		});
 		return _.map(points, function(val, pointName){
 			return (
-				React.DOM.div({className: "pointRow", key: pointName}, 
+				React.DOM.div({className: "pointRow", key: pointName},
 					React.DOM.label(null, pointName), " ", val
 				)
 			);
@@ -434,8 +434,8 @@ var PointsBar = React.createClass({displayName: 'PointsBar',
 		var points = this.renderPoints();
 		if(!points.length) return React.DOM.noscript(null);
 		return(
-			React.DOM.div({className: "pointsBar"}, 
-				React.DOM.div({className: "title"}, "points!"), 
+			React.DOM.div({className: "pointsBar"},
+				React.DOM.div({className: "title"}, "points!"),
 				points
 			)
 		);
@@ -451,7 +451,7 @@ module.exports = PointsBar;
 /** @jsx React.DOM */
 var React = window.React;
 var _ = window._;
-var cx = React.addons.classSet;
+var cx = require('classnames');
 
 
 var Item = require('../itemIcon/itemIcon.jsx');
@@ -488,7 +488,7 @@ var Timeline = React.createClass({displayName: 'Timeline',
 
 
 		var markers = _.times(moment().diff(config.start, 'days') + 1, function(day){
-			return React.DOM.div({className: "marker", key: day, style: {top: config.dayPixelRatio * day + TOP_OFFSET}}, 
+			return React.DOM.div({className: "marker", key: day, style: {top: config.dayPixelRatio * day + TOP_OFFSET}},
 				moment(config.start).add(day, 'days').format('MMM Do')
 				)
 		});
@@ -503,7 +503,7 @@ var Timeline = React.createClass({displayName: 'Timeline',
 
 				var days = date.diff(config.start, 'days');
 
-				r.push(Item({item: event, key: event.date.format(), style: {top: config.dayPixelRatio * days + TOP_OFFSET}}, 
+				r.push(Item({item: event, key: event.date.format(), style: {top: config.dayPixelRatio * days + TOP_OFFSET}},
 					React.DOM.i({className: 'fa ' + event.icon})
 				))
 
@@ -522,12 +522,12 @@ var Timeline = React.createClass({displayName: 'Timeline',
 
 
 		return(
-			React.DOM.div({className: "timeline", style: {height : numDays * config.dayPixelRatio}}, 
+			React.DOM.div({className: "timeline", style: {height : numDays * config.dayPixelRatio}},
 
-				markers, 
-				items, 
-				React.DOM.div({className: "background", style: backgroundStyle}), 
-				React.DOM.div({className: "topGradient"}), 
+				markers,
+				items,
+				React.DOM.div({className: "background", style: backgroundStyle}),
+				React.DOM.div({className: "topGradient"}),
 				React.DOM.div({className: "bottomGradient"})
 
 
@@ -543,7 +543,7 @@ module.exports = Timeline;
 /** @jsx React.DOM */
 var React = window.React;
 var _ = window._;
-var cx = React.addons.classSet;
+var cx = require('classnames');
 var Moment = window.moment;
 
 var getTimeOfDay = function(){
@@ -583,22 +583,22 @@ var TopSection = React.createClass({displayName: 'TopSection',
 		var percentage = (Moment().diff(config.start, 'days')) / ( config.end.diff(config.start, 'days'));
 
 		return(
-			React.DOM.div({className: 'topSection ' + getTimeOfDay(), 
-				 style: {'background-position-x' : this.state.backgroundPosition}}, 
-				React.DOM.div({className: "startMessage"}, 
-					React.DOM.div(null, "Scroll to start her adventure"), 
+			React.DOM.div({className: 'topSection ' + getTimeOfDay(),
+				 style: {'background-position-x' : this.state.backgroundPosition}},
+				React.DOM.div({className: "startMessage"},
+					React.DOM.div(null, "Scroll to start her adventure"),
 					React.DOM.img({className: "downArrow", src: "/assets/lpdoc/topSection/down_arrow.png"})
-				), 
-				React.DOM.div({className: "title"}, 
+				),
+				React.DOM.div({className: "title"},
 					"How Much is LP a Doctor?"
-				), 
-				React.DOM.div({className: "subtitle"}, 
+				),
+				React.DOM.div({className: "subtitle"},
 					"An Interactive adventure!"
-				), 
-				React.DOM.div({className: "topPercentage"}, 
-					React.DOM.div(null, Math.round(percentage * 10000) / 100, "%"), 
+				),
+				React.DOM.div({className: "topPercentage"},
+					React.DOM.div(null, Math.round(percentage * 10000) / 100, "%"),
 					React.DOM.img({src: "/assets/lpdoc/sparkle.gif"})
-				), 
+				),
 				React.DOM.div({className: "bottomGradient"})
 			)
 		);

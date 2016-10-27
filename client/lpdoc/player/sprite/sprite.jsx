@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 var React = require('react');
 var _ = require('underscore');
-var cx = React.addons.classSet;
+var cx = require('classnames');
 
 var Sprite = React.createClass({
 	img : null,
