@@ -39,7 +39,7 @@ var Player = React.createClass({
 				<div className='name'>{this.state.currentEvent.name}</div>
 				<div className='desc'>{this.state.currentEvent.desc}</div>
 			</div>,
-			<div className='hoverItem'>
+			<div className='hoverItem' key='2'>
 				<ItemIcon item={this.state.currentEvent} />
 				<img src='/assets/lpdoc/sparkle.gif' />
 			</div>

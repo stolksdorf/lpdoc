@@ -42,14 +42,19 @@ var Timeline = React.createClass({
 	},
 
 	renderItems : function(){
-console.log(this.state.upcomingEvents);
-
 		return _.map(this.state.upcomingEvents, (event) => {
 			var days = event.date.diff(Store.getState().start, 'days');
 			return <Item item={event} key={event.date.format()} style={{top: Store.getState().pixelRatio * days + TOP_OFFSET}}>
 				<i className={'fa ' + event.icon} />
 			</Item>
 		});
+	},
+
+	renderPercentage : function(){
+		if(this.state.scroll == 0) return;
+		return <div className='percentage'>
+			{Math.round(Store.getCurrentPercentage() * 10000) / 100}%
+		</div>
 	},
 
 	getBackgroundStyle : function(){
@@ -60,6 +65,7 @@ console.log(this.state.upcomingEvents);
 
 	render : function(){
 		return <div className='timeline' style={{height : Store.getTotalDays() * Store.getState().pixelRatio}}>
+			{this.renderPercentage()}
 			{this.renderMarkers()}
 			{this.renderItems()}
 			<div className='background' style={this.getBackgroundStyle()}></div>

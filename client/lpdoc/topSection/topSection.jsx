@@ -25,10 +25,10 @@ var TopSection = React.createClass({
 					<img className='downArrow' src='/assets/lpdoc/topSection/down_arrow.png' />
 				</div>
 				<div className='title'>
-					How Much is LP a Doctor?
+					How Much is LP a Doctor
 				</div>
 				<div className='subtitle'>
-					An Interactive adventure!
+					An Interactive adventure
 				</div>
 				<div className='topPercentage'>
 					<div>{_.round(Store.getPercentComplete(), 2)}%</div>

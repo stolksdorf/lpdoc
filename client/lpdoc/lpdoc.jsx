@@ -103,24 +103,14 @@ var LPDoc = React.createClass({
 		Actions.scroll(window.pageYOffset);
 	},
 
-	//Probably move to timeline
-	renderPercentage : function(){
-		if(Store.getScroll() == 0) return;
-		return 	<div className='percentage'>
-			{Math.round(Store.getPercentage() * 10000) / 100}%
-		</div>
-	},
-
 	render : function(){
 		return <div className='lpdoc' onScroll={this.handleScroll}>
 			<TopSection />
 			<Timeline />
 
-			<Player
-				currentSprite={this.state.currentSprite}
-				currentItem={this.state.currentItem}
-				config={this.state.config}
-				scroll={this.state.scroll}/>
+			<Player />
+
+			<PointsBar />
 
 			{/*
 
@@ -136,9 +126,8 @@ var LPDoc = React.createClass({
 					 config={this.state.config}
 					 scroll={this.state.scroll}/>
 
-			<PointsBar items={this.state.itemsCollected} />
+
 			*/}
-			{this.renderPercentage()}
 		</div>
 	}
 });
