@@ -2,7 +2,11 @@
 var React = require('react');
 var _ = require('lodash');
 var cx = require('classnames');
+
+
 var Moment = require('moment');
+
+const Store = require('lpdoc/store.js');
 
 var getTimeOfDay = function(){
 	var hour = (new Date).getHours();
@@ -15,11 +19,12 @@ var getTimeOfDay = function(){
 var TopSection = React.createClass({
 	getDefaultProps: function() {
 		return {
-			scroll : 0,
-			isDayTime : (8 <=(new Date).getHours()) && ((new Date).getHours() <= 20)
+			//scroll : 0,
+			//isDayTime : (8 <=(new Date).getHours()) && ((new Date).getHours() <= 20)
 		};
 	},
 
+	/*
 	getInitialState: function() {
 		return {
 			backgroundPosition : 0
@@ -28,10 +33,10 @@ var TopSection = React.createClass({
 
 	componentDidMount: function() {
 	},
-
+	*/
 	render : function(){
-		var config = this.props.config;
-		var percentage = (Moment().diff(config.start, 'days')) / ( config.end.diff(config.start, 'days'));
+		//var config = this.props.config;
+		//var percentage = (Moment().diff(config.start, 'days')) / ( config.end.diff(config.start, 'days'));
 
 		/*
 
@@ -57,7 +62,7 @@ var TopSection = React.createClass({
 					An Interactive adventure!
 				</div>
 				<div className='topPercentage'>
-					<div>{Math.round(percentage * 10000) / 100}%</div>
+					<div>{_.round(Store.getPercentComplete(), 2)}%</div>
 					<img src='/assets/lpdoc/sparkle.gif' />
 				</div>
 				<div className='bottomGradient'></div>

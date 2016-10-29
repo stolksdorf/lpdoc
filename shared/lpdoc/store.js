@@ -13,7 +13,7 @@ const State = {
 };
 
 const parseDate = (date) => {
-	return Moment(date, "MMM Do, YYYY")
+	return Moment(date, "MMM D, YYYY")
 }
 
 module.exports = flux.createStore({
@@ -28,15 +28,18 @@ module.exports = flux.createStore({
 	},
 	SCROLL : function(val){
 		console.log(val);
-
 	},
 },{
-	//And your State getters as the second parameter
-	getInc : function(){
-		return State.inc;
+
+	getScroll : function(){
+		return State.scroll
 	},
 
-	getPercentage : function(){
-		return (State.scroll / State.dayPixelRatio) / ( State.end.diff(State.start, 'days'))
+	getPercentComplete : function(){
+		return Moment().diff(State.start, 'days') / State.end.diff(State.start, 'days')
+	},
+
+	getCurrentPercentage : function(){
+		return (State.scroll / State.pixelRatio) / ( State.end.diff(State.start, 'days'))
 	}
 })

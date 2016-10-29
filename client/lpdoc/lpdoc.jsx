@@ -26,7 +26,7 @@ const Actions = require('lpdoc/actions.js');
 const Store = require('lpdoc/store.js');
 
 
-var lpdoc = React.createClass({
+var LPDoc = React.createClass({
 	getDefaultProps: function() {
 		return {
 			url : '',
@@ -38,7 +38,7 @@ var lpdoc = React.createClass({
 	getInitialState: function() {
 
 		return this.getUpdatedState(0,
-			this.processConfig(this.props.config));
+			this.processConfig(this.props.old_config));
 
 	},
 
@@ -89,17 +89,13 @@ var lpdoc = React.createClass({
 		};
 	},
 
-
-
-
-	componentDidMount: function() {
-		console.log('mounting', this.props);
-
+	componentWillMount: function() {
 		Actions.setConfig(this.props.config);
 		Actions.setEvents(this.props.events);
-
-		console.log(Store.getPercentage());
 	},
+
+
+
 
 	handleScroll : function(e){
 		this.setState(this.getUpdatedState(window.pageYOffset));
@@ -110,62 +106,46 @@ var lpdoc = React.createClass({
 
 	},
 
+	//Probably move
+	renderPercentage : function(){
+		if(Store.getScroll() == 0) return;
 
-	render : function(){
-		var self = this;
-
-		//Don't load anything if we don't have the config
-		//if(!this.state.config) return <noscript />
-
-		var percentage;
-		if(this.state.scroll !== 0){
-			percentage = (
-				<div className='percentage'>
-					{Math.round(this.state.percentage * 10000) / 100}%
-				</div>
-			);
-		}
-
-		console.log(Store);
-
-		return <div className='lpdoc' onScroll={this.handleScroll}>
-			{Store.getPercentage()}
+		return 	<div className='percentage'>
+			{Math.round(Store.getPercentage() * 10000) / 100}%
 		</div>
+	},
+	render : function(){
+		return <div className='lpdoc' onScroll={this.handleScroll}>
+			<TopSection />
 
-		return(
-			<div className='lpdoc' onScroll={this.handleScroll}>
-				<TopSection
-					config={this.state.config}
-					scroll={this.state.scroll}
-					percentage={this.state.percentage} />
+			{/*
 
-				<Player
-					currentSprite={this.state.currentSprite}
-					currentItem={this.state.currentItem}
-					config={this.state.config}
-					scroll={this.state.scroll}/>
-
+			<Player
+				currentSprite={this.state.currentSprite}
+				currentItem={this.state.currentItem}
+				config={this.state.config}
+				scroll={this.state.scroll}/>
 
 
 
-				<Timeline
-					itemsCollected={this.state.itemsCollected}
-					currentItem={this.state.currentItem}
-					scrollDay={this.state.scrollDay}
-					config={this.state.config}
-					scroll={this.state.scroll} />
+
+			<Timeline
+				itemsCollected={this.state.itemsCollected}
+				currentItem={this.state.currentItem}
+				scrollDay={this.state.scrollDay}
+				config={this.state.config}
+				scroll={this.state.scroll} />
 
 
-				<ItemBar items={this.state.itemsCollected}
-						 config={this.state.config}
-						 scroll={this.state.scroll}/>
+			<ItemBar items={this.state.itemsCollected}
+					 config={this.state.config}
+					 scroll={this.state.scroll}/>
 
-				<PointsBar items={this.state.itemsCollected} />
-
-				{percentage}
-			</div>
-		);
+			<PointsBar items={this.state.itemsCollected} />
+			*/}
+			{this.renderPercentage()}
+		</div>
 	}
 });
 
-module.exports = lpdoc;
+module.exports = LPDoc;

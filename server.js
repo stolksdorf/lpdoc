@@ -24,6 +24,7 @@ app.use((req, res) => {
 		prerenderWith : './client/lpdoc/lpdoc.jsx',
 		initialProps: {
 			url: req.originalUrl,
+			old_config : config,
 			config : Config,
 			events : Events
 		},
