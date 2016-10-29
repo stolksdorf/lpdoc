@@ -31,7 +31,7 @@ var TopSection = React.createClass({
 					An Interactive adventure
 				</div>
 				<div className='topPercentage'>
-					<div>{_.round(Store.getPercentComplete(), 2)}%</div>
+					<div>{Store.getPercentComplete()}%</div>
 					<img src='/assets/lpdoc/sparkle.gif' />
 				</div>
 				<div className='bottomGradient'></div>

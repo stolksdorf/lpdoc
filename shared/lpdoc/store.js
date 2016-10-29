@@ -8,14 +8,23 @@ const State = {
 	pixelRatio : 300,
 
 	events : [],
+	eventGroups : {
+		past : [],
+		current : [],
+		future : []
+	},
+
 
 	scroll : 0,
-
 	currentDay : null,
+
+/*
 	lastEventIndex : 0,
 
 	lastEvent : {}, //rename to last event
 
+	currentEvent : null,
+*/
 	currentSprite : 'base.png',
 
 	totalDays : 0,
@@ -53,19 +62,26 @@ module.exports = flux.createStore({
 	},
 	SCROLL : function(scroll){
 		State.scroll = scroll;
-		const currentUnix = Moment(State.start).add(getCurrentDayNum(), 'days').unix();
+		//const currentUnix = Moment(State.start).add(getCurrentDayNum(), 'days').unix();
 
+		const currentDayNum = getCurrentDayNum();
 
-		const testEvent = (event, idx) => {
-			if(event && event.date.unix() <= currentUnix){
-				if(event.sprite) State.currentSprite = event.sprite;
-				State.lastEvent = event;
-				State.lastEventIndex = idx;
-				return testEvent(State.events[idx + 1], idx + 1);
-			}
-		};
+		State.currentEvent = null;
+		State.currentEventIndex = -1;
 
-		testEvent(State.events[0], 0);
+		State.eventGroups = _.groupBy(State.events, (event) => {
+			if(event.sprite) State.lastSprite = event.sprite;
+			if(event.dayNum > currentDayNum) return 'future';
+
+			if(event.sprite) State.currentSprite = event.sprite;
+
+			if(event.dayNum == currentDayNum) return 'current';
+			if(event.dayNum < currentDayNum) return 'past';
+		});
+
+		State.eventGroups.past = State.eventGroups.past || [];
+		State.eventGroups.current = State.eventGroups.current || [];
+		State.eventGroups.future = State.eventGroups.future || [];
 	},
 },{
 	getState : function(){
@@ -79,18 +95,18 @@ module.exports = flux.createStore({
 		return Moment(State.start).add(getCurrentDayNum(), 'days');
 	},
 	getPercentComplete : function(){
-		return Moment().diff(State.start, 'days') / State.totalDays
+		return _.round(Moment().diff(State.start, 'days') / State.totalDays * 100, 1);
 	},
 	getCurrentPercentage : function(){
-		return getCurrentDayNum() / State.totalDays
+		return _.round(getCurrentDayNum() / State.totalDays * 100, 1)
 	},
 
 
 	getCompletedEvents : function(){
-		return _.slice(State.events, 0, State.lastEventIndex);
+		return State.eventGroups.past;
 	},
 	getUpcomingEvents : function(){
-		return _.slice(State.events, State.lastEventIndex + 1);
+		return State.eventGroups.future;
 	},
 
 
@@ -98,11 +114,11 @@ module.exports = flux.createStore({
 		return State.lastEvent;
 	},
 	getCurrentEvent : function(){
-		if(State.lastEvent.dayNum == getCurrentDayNum()) return State.lastEvent;
+		if(State.eventGroups.current) return State.eventGroups.current[0]
 	},
 
-
 	getCurrentSprite : function(){
+		if(State.scroll == 0) return State.lastSprite;
 		return State.currentSprite;
 	},
 

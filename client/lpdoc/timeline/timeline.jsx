@@ -25,6 +25,7 @@ var Timeline = React.createClass({
 	getState : function(){
 		return {
 			upcomingEvents : Store.getUpcomingEvents(),
+			currentEvent : Store.getCurrentEvent(),
 			scroll : Store.getScroll()
 		}
 	},
@@ -42,6 +43,7 @@ var Timeline = React.createClass({
 	},
 
 	renderItems : function(){
+		//console.log(this.state.upcomingEvents[0].name);
 		return _.map(this.state.upcomingEvents, (event) => {
 			var days = event.date.diff(Store.getState().start, 'days');
 			return <Item item={event} key={event.date.format()} style={{top: Store.getState().pixelRatio * days + TOP_OFFSET}}>
@@ -53,7 +55,7 @@ var Timeline = React.createClass({
 	renderPercentage : function(){
 		if(this.state.scroll == 0) return;
 		return <div className='percentage'>
-			{Math.round(Store.getCurrentPercentage() * 10000) / 100}%
+			{Store.getCurrentPercentage()}%
 		</div>
 	},
 

@@ -17,7 +17,8 @@ var Sprite = React.createClass({
 	componentDidMount: function() {
 		var self = this;
 		this.img = new Image();
-		this.img.src = `assets/lpdoc/player/sprite/${this.props.imageSrc}`;
+		this.img.src = `sprites/${this.props.imageSrc}`;
+		console.log(`sprites/${this.props.imageSrc}`);
 		this.img.onload = function(){
 			self.draw();
 		}
@@ -28,7 +29,7 @@ var Sprite = React.createClass({
 		var self = this;
 		if(nextProps.imageSrc !== this.props.imageSrc){
 			this.img = new Image();
-			this.img.src = `assets/lpdoc/player/sprite/${nextProps.imageSrc}`;
+			this.img.src = `sprites/${nextProps.imageSrc}`;
 			this.img.onload = function(){
 				self.draw();
 			}

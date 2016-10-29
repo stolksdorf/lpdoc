@@ -7,9 +7,6 @@ app.use(express.static(__dirname + '/build'));
 const YAML = require('js-yaml');
 
 
-const config = require('./lpdoc_config.json');
-
-
 const Events = YAML.safeLoad(fs.readFileSync('./lp_med_events.yaml', 'utf8'));
 const Config = YAML.safeLoad(fs.readFileSync('./config.yaml', 'utf8'));
 
@@ -24,7 +21,6 @@ app.use((req, res) => {
 		prerenderWith : './client/lpdoc/lpdoc.jsx',
 		initialProps: {
 			url: req.originalUrl,
-			old_config : config,
 			config : Config,
 			events : Events
 		},
