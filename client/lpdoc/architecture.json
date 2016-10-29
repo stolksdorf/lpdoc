@@ -19,6 +19,7 @@
 		"react",
 		"lodash",
 		"classnames",
+		"moment",
 		"../itemIcon/itemIcon.jsx"
 	],
 	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\player\\sprite\\sprite.jsx": [
@@ -42,6 +43,7 @@
 		"react",
 		"lodash",
 		"classnames",
+		"moment",
 		"./itemBar/itemBar.jsx",
 		"./topSection/topSection.jsx",
 		"./pointsBar/pointsBar.jsx",

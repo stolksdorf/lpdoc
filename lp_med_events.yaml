@@ -1,0 +1,32 @@
+- name : MacMed Formal
+  desc : Such new friends. +5 Team points
+  date : Aug 29th 2014
+  icon : fa-glass
+  sprite : base
+
+- name : Classes Start
+  desc : The Journey Begins.
+  date : Sept 2nd 2014
+  icon : fa-university
+
+- name : First anatomy class
+  desc : Learned about the thoracic cage! +5 Doctor Points.
+  date : Sept 10th 2014
+  icon : fa-hospital-o
+
+- name : Stethoscope Get!
+  desc : So ready for med school. +5 Doctor points.
+  date : Sept 16th 2014
+  icon : fa-stethoscope
+
+- name : Respirology Unit Complete!
+  desc : Lungs - check. +10 Doctor points.
+  date : Sept 29th 2014
+  icon : fa-check-square-o
+
+- name : White Coat Get!
+  desc : Ready for the wards. +5 Doctor points.
+  date : Sept 30th 2014
+  icon : fa-user-md
+  sprite : white_coat
+
