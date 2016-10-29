@@ -47,7 +47,7 @@ var Player = React.createClass({
 	},
 
 	render : function(){
-		return<div className='player'>
+		return <div className='player'>
 			<div className='container'>
 				{this.renderHover()}
 				<Sprite frame={this.state.frame} imageSrc={this.state.currentSprite} />

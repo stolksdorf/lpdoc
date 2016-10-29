@@ -18,7 +18,6 @@ var Sprite = React.createClass({
 		var self = this;
 		this.img = new Image();
 		this.img.src = `sprites/${this.props.imageSrc}`;
-		console.log(`sprites/${this.props.imageSrc}`);
 		this.img.onload = function(){
 			self.draw();
 		}

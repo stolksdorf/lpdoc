@@ -108,6 +108,7 @@ var ItemBar = React.createClass({
 		var zoomClass = 'standard'
 		if(this.state.events.length > 12) zoomClass = 'mini';
 		if(this.state.events.length > 32) zoomClass = 'super_mini';
+		if(this.state.events.length > 50) zoomClass = 'tiny';
 
 /*
 		var descriptionBox;
