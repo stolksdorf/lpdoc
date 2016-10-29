@@ -118,6 +118,14 @@ var LPDoc = React.createClass({
 		return <div className='lpdoc' onScroll={this.handleScroll}>
 			<TopSection />
 
+
+			<Timeline
+				itemsCollected={this.state.itemsCollected}
+				currentItem={this.state.currentItem}
+				scrollDay={this.state.scrollDay}
+				config={this.state.config}
+				scroll={this.state.scroll} />
+
 			{/*
 
 			<Player
@@ -129,12 +137,7 @@ var LPDoc = React.createClass({
 
 
 
-			<Timeline
-				itemsCollected={this.state.itemsCollected}
-				currentItem={this.state.currentItem}
-				scrollDay={this.state.scrollDay}
-				config={this.state.config}
-				scroll={this.state.scroll} />
+
 
 
 			<ItemBar items={this.state.itemsCollected}

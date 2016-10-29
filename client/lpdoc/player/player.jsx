@@ -8,7 +8,11 @@ var Sprite = require('./sprite/sprite.jsx');
 var ItemIcon = require('../itemIcon/itemIcon.jsx');
 
 
+const Store = require('lpdoc/store.js');
+
+
 var Player = React.createClass({
+	mixins : [Store.mixin()],
 
 	getDefaultProps: function() {
 		return {
@@ -17,6 +21,24 @@ var Player = React.createClass({
 			percentage : 0
 		};
 	},
+
+	getInitialState: function() {
+		return this.getState()
+	},
+	onStoreChange: function(){
+		this.setState(this.getState());
+	},
+
+	getState : function(){
+		return {
+			frame : Math.floor(Store.getScroll() / 150) % 8,
+
+			currentEvent : Store.getCurrentEvent(),
+			currentSprite : Store.getCurrentSprite()
+		};
+	},
+
+
 
 	render : function(){
 		var self = this;

@@ -9,11 +9,10 @@
 		"lodash",
 		"classnames"
 	],
-	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\topSection\\topSection.jsx": [
+	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\itemIcon\\itemIcon.jsx": [
 		"react",
 		"lodash",
-		"classnames",
-		"moment"
+		"classnames"
 	],
 	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\timeline\\timeline.jsx": [
 		"react",
@@ -27,24 +26,28 @@
 		"lodash",
 		"classnames"
 	],
-	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\itemIcon\\itemIcon.jsx": [
+	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\shared\\lpdoc\\store.js": [
+		"lodash",
+		"pico-flux",
+		"moment"
+	],
+	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\shared\\lpdoc\\actions.js": [
+		"pico-flux"
+	],
+	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\topSection\\topSection.jsx": [
 		"react",
 		"lodash",
-		"classnames"
+		"classnames",
+		"moment",
+		"lpdoc/store.js"
 	],
 	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\player\\player.jsx": [
 		"react",
 		"lodash",
 		"classnames",
+		"../itemIcon/itemIcon.jsx",
 		"./sprite/sprite.jsx",
-		"../itemIcon/itemIcon.jsx"
-	],
-	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\shared\\lpdoc\\actions.js": [
-		"pico-flux"
-	],
-	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\shared\\lpdoc\\store.js": [
-		"pico-flux",
-		"moment"
+		"lpdoc/store.js"
 	],
 	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\lpdoc.jsx": [
 		"react",
@@ -53,10 +56,10 @@
 		"moment",
 		"./itemBar/itemBar.jsx",
 		"./pointsBar/pointsBar.jsx",
-		"./topSection/topSection.jsx",
 		"./timeline/timeline.jsx",
-		"./player/player.jsx",
+		"lpdoc/store.js",
 		"lpdoc/actions.js",
-		"lpdoc/store.js"
+		"./topSection/topSection.jsx",
+		"./player/player.jsx"
 	]
 }
