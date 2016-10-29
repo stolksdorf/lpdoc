@@ -1,7 +1,7 @@
-/** @jsx React.DOM */
+
 var React = require('react');
-var _ = require('underscore');
-var cx = React.addons.classSet;
+var _ = require('lodash');
+var cx = require('classnames');
 
 var Sprite = React.createClass({
 	img : null,
@@ -17,7 +17,7 @@ var Sprite = React.createClass({
 	componentDidMount: function() {
 		var self = this;
 		this.img = new Image();
-		this.img.src = this.props.imageSrc;
+		this.img.src = `sprites/${this.props.imageSrc}`;
 		this.img.onload = function(){
 			self.draw();
 		}
@@ -28,7 +28,7 @@ var Sprite = React.createClass({
 		var self = this;
 		if(nextProps.imageSrc !== this.props.imageSrc){
 			this.img = new Image();
-			this.img.src = nextProps.imageSrc;
+			this.img.src = `sprites/${nextProps.imageSrc}`;
 			this.img.onload = function(){
 				self.draw();
 			}
@@ -39,7 +39,7 @@ var Sprite = React.createClass({
 
 	draw : function(props){
 		props = props || this.props;
-		var canvas = this.refs.canvas.getDOMNode();
+		var canvas = this.refs.canvas;
 		var ctx = canvas.getContext('2d');
 
 		ctx.clearRect ( 0 , 0 , canvas.width, canvas.height );

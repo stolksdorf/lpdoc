@@ -1,8 +1,12 @@
-/** @jsx React.DOM */
+'use strict';
+
 var React = require('react');
-var _ = require('underscore');
-var $ = require('jquery');
-var cx = React.addons.classSet;
+var _ = require('lodash');
+//var $ = require('jquery');
+var cx = require('classnames');
+
+const Store = require('lpdoc/store.js');
+
 
 var ItemBar = React.createClass({
 	getInitialState: function() {
@@ -11,6 +15,21 @@ var ItemBar = React.createClass({
 			items : []
 		};
 	},
+
+	mixins : [Store.mixin()],
+	getInitialState: function() {
+		return this.getState()
+	},
+	onStoreChange: function(){
+		this.setState(this.getState());
+	},
+
+	getState : function(){
+		return {
+			events : Store.getCompletedEvents()
+		};
+	},
+
 
 	//This makes picking up items "sticky".
 	componentWillReceiveProps: function(nextProps) {
@@ -26,11 +45,18 @@ var ItemBar = React.createClass({
 		};
 	},
 	clickItem : function(item){
+		return;
 		var time = Math.abs(dateToPixel(item.date, this.props.config) - this.props.scroll) * 0.5;
 		if(time > 5000) time = 5000;
+
+		alert('clicked item!');
+
+		/*
 		$("html, body").animate({
 			scrollTop: dateToPixel(item.date, this.props.config)
 		}, time);
+
+		*/
 	},
 	selectItem : function(item){
 		this.setState({
@@ -42,47 +68,62 @@ var ItemBar = React.createClass({
 			selectedItem : null
 		});
 	},
-	render : function(){
-		var self = this;
 
+
+	renderItems : function(){
+		//console.log(this.state.events);
+
+
+		return _.map(this.state.events, (event, index) => {
+			return <div className='item' key={index}
+						onClick={this.clickItem.bind(null, event)}
+						onMouseEnter={this.selectItem.bind(null, event)}
+						onMouseLeave={this.deselectItem.bind(null, event)}>
+				<i className={'fa fa-fw ' + event.icon} />
+			</div>
+		});
+	},
+
+	renderSelectedItem : function(){
+		if(!this.state.selectedItem) return;
+
+		return <div className='descriptionBox'>
+			<div className='itemName'>{this.state.selectedItem.name}</div>
+			<div className='itemDate'>{this.state.selectedItem.date.format("MMM Do, YYYY")}</div>
+			<div className='itemDescription'>{this.state.selectedItem.desc}</div>
+		</div>;
+	},
+
+
+	render : function(){
+		/*
 
 		if(this.state.items.length === 0) return <noscript />;
 
 		var items = _.map(this.state.items, function(item, index){
-			return <div className='item' key={index}
-						onClick={self.clickItem.bind(self, item)}
-						onMouseEnter={self.selectItem.bind(self, item)}
-						onMouseLeave={self.deselectItem.bind(self, item)}>
-				<i className={'fa fa-fw ' + item.icon} />
-			</div>
+			return
 		});
 
-
+*/
 		var zoomClass = 'standard'
-		if(items.length > 12) zoomClass = 'mini';
-		if(items.length > 32) zoomClass = 'super_mini';
+		if(this.state.events.length > 12) zoomClass = 'mini';
+		if(this.state.events.length > 32) zoomClass = 'super_mini';
+		if(this.state.events.length > 50) zoomClass = 'tiny';
 
-
+/*
 		var descriptionBox;
 		if(this.state.selectedItem){
-			descriptionBox = <div className='descriptionBox'>
-				<div className='itemName'>{this.state.selectedItem.name}</div>
-				<div className='itemDate'>{this.state.selectedItem.date.format("MMM Do, YYYY")}</div>
-				<div className='itemDescription'>{this.state.selectedItem.desc}</div>
-			</div>
+			descriptionBox =
 		}
+*/
 
-
-		return(
-			<div className='itemArea'>
-				{descriptionBox}
-				<div className={'itemBar ' + zoomClass}>
-					<div className='itemTitle'>Items collected</div>
-					{items}
-
-				</div>
+		return <div className='itemArea'>
+			{this.renderSelectedItem()}
+			<div className={'itemBar ' + zoomClass}>
+				<div className='itemTitle'>Items collected</div>
+				{this.renderItems()}
 			</div>
-		);
+		</div>
 	}
 });
 

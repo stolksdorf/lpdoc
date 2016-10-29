@@ -1,43 +1,49 @@
-/** @jsx React.DOM */
+
 var React = require('react');
-var _ = require('underscore');
-var cx = React.addons.classSet;
+var _ = require('lodash');
+var cx = require('classnames');
+
+const Store = require('lpdoc/store.js');
 
 var PointsBar = React.createClass({
+	mixins : [Store.mixin()],
+	getInitialState: function() {
+		return this.getState()
+	},
+	onStoreChange: function(){
+		this.setState(this.getState());
+	},
 
-	getDefaultProps: function() {
+	getState : function(){
 		return {
-			items : []
+			events : Store.getCompletedEvents()
 		};
 	},
 
 	renderPoints : function(){
 		var pointsRegex = new RegExp(/[0-9]+ \w+ points/);
 		var points = {};
-		var temp = _.each(this.props.items, function(item){
-			var desc = item.desc.toLowerCase();
+		var temp = _.each(this.state.events, (event) => {
+			var desc = event.desc.toLowerCase();
 			if(pointsRegex.test(desc)){
-				pointDesc = pointsRegex.exec(desc)[0].split(' ');
+				const pointDesc = pointsRegex.exec(desc)[0].split(' ');
 				points[pointDesc[1]] = points[pointDesc[1]] || 0;
 				points[pointDesc[1]] += pointDesc[0]*1;
 			}
 		});
-		return _.map(points, function(val, pointName){
-			return (
-				<div className='pointRow' key={pointName}>
-					<label>{pointName}</label> {val}
-				</div>
-			);
+		return _.map(points, (val, pointName) => {
+			return <div className='pointRow' key={pointName}>
+				<label>{pointName}</label> {val}
+			</div>
 		})
 	},
 
 	render : function(){
-		var self = this;
 		var points = this.renderPoints();
 		if(!points.length) return <noscript />;
 		return(
 			<div className='pointsBar'>
-				<div className='title'>points!</div>
+				<div className='title'>points</div>
 				{points}
 			</div>
 		);

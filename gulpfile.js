@@ -1,27 +1,38 @@
-
-var recoil = require("recoil");
+var vitreumTasks = require("vitreum/tasks");
 var gulp = require("gulp");
+var runSequence = require('run-sequence').use(gulp);
 
-var gulp = recoil.tasks(gulp, {
-	entryPoints: ["./client/lpdoc"],
+
+var gulp = vitreumTasks(gulp, {
+	entryPoints: [
+		'./client/lpdoc',
+	],
+
 	DEV: true,
 	buildPath: "./build/",
-
-	pageTemplate: "./client/template.hbs",
-
-	projectModules: [],
-	assetExts: ["*.svg", "*.png", "*.jpg", "*.pdf", "*.ico", "*.bmp", '*.ttf', '*.gif'],
-
-	renderStatic : true,
-
+	pageTemplate: "./client/template.dot",
+	projectModules: ["./shared/lpdoc"],
+	additionalRequirePaths : ['./shared', './node_modules'],
+	assetExts: ["*.svg", "*.png", "*.jpg", "*.pdf", "*.eot", "*.otf", "*.woff", "*.woff2", "*.ico", "*.ttf", "*.gif"],
 	serverWatchPaths: ["server"],
-	serverScript: "./server.js",
-
-	cdn: {
-		"react": ["window.React", "<script src='//cdnjs.cloudflare.com/ajax/libs/react/0.10.0/react-with-addons.js'></script>"],
-		"jquery": ["window.jQuery", "<script src='//code.jquery.com/jquery-1.11.0.min.js'></script>"],
-		"underscore": ["window._", "<script src='//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js'></script>"],
-		"moment": ["window.moment", "<script src='//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js'></script>"],
-	},
-	libs: [],
+	serverScript: "server.js",
+	libs: [
+		"react",
+		"react-dom",
+		"lodash",
+		"classnames",
+		"moment",
+		"pico-flux"
+	],
+	clientLibs: [],
 });
+
+gulp.task('sprites', () => {
+	gulp.src('./sprites/*.png')
+		.pipe(gulp.dest('./build/sprites'));
+
+})
+
+gulp.task('full', (cb) => {
+	runSequence('prod', 'sprites', cb);
+})
