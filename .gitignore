@@ -4,6 +4,7 @@ logs
 
 #Ignore our built files
 build/*
+build
 architecture.json
 
 # Ignore sensitive stuff
