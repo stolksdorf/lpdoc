@@ -94,47 +94,37 @@ var LPDoc = React.createClass({
 		Actions.setEvents(this.props.events);
 	},
 
-
+	componentDidMount: function() {
+		window.addEventListener("scroll", this.handleScroll);
+	},
 
 
 	handleScroll : function(e){
-
-		console.log('scoll!');
-		this.setState(this.getUpdatedState(window.pageYOffset));
-
 		Actions.scroll(window.pageYOffset);
-
-		console.log(Store.getPercentage());
-
 	},
 
-	//Probably move
+	//Probably move to timeline
 	renderPercentage : function(){
 		if(Store.getScroll() == 0) return;
-
 		return 	<div className='percentage'>
 			{Math.round(Store.getPercentage() * 10000) / 100}%
 		</div>
 	},
+
 	render : function(){
 		return <div className='lpdoc' onScroll={this.handleScroll}>
 			<TopSection />
-
-
-			<Timeline
-				itemsCollected={this.state.itemsCollected}
-				currentItem={this.state.currentItem}
-				scrollDay={this.state.scrollDay}
-				config={this.state.config}
-				scroll={this.state.scroll} />
-
-			{/*
+			<Timeline />
 
 			<Player
 				currentSprite={this.state.currentSprite}
 				currentItem={this.state.currentItem}
 				config={this.state.config}
 				scroll={this.state.scroll}/>
+
+			{/*
+
+
 
 
 

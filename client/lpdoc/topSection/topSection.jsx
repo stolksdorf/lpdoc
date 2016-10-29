@@ -17,38 +17,7 @@ var getTimeOfDay = function(){
 }
 
 var TopSection = React.createClass({
-	getDefaultProps: function() {
-		return {
-			//scroll : 0,
-			//isDayTime : (8 <=(new Date).getHours()) && ((new Date).getHours() <= 20)
-		};
-	},
-
-	/*
-	getInitialState: function() {
-		return {
-			backgroundPosition : 0
-		};
-	},
-
-	componentDidMount: function() {
-	},
-	*/
 	render : function(){
-		//var config = this.props.config;
-		//var percentage = (Moment().diff(config.start, 'days')) / ( config.end.diff(config.start, 'days'));
-
-		/*
-
-		console.log(config.start, config.end);
-
-		console.log(config.start.diff(config.end));
-
-		console.log( config.end.diff(config.start, 'day'));
-
-		console.log(Moment().diff(config.start, 'days'));
-		console.log(Moment().diff(Moment("11-10-2013 09:03 AM", "DD-MM-YYYY hh:mm A"), "minute"));
-	*/
 		return(
 			<div className={'topSection ' + getTimeOfDay() }>
 				<div className='startMessage'>
