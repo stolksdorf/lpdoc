@@ -2,7 +2,7 @@
   desc : Such new friends. +5 Team points
   date : Aug 29th 2014
   icon : fa-glass
-  sprite : base
+  sprite : base.png
 
 - name : Classes Start
   desc : The Journey Begins.
@@ -28,5 +28,5 @@
   desc : Ready for the wards. +5 Doctor points.
   date : Sept 30th 2014
   icon : fa-user-md
-  sprite : white_coat
+  sprite : white_coat.png
 
