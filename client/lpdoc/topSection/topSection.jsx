@@ -33,6 +33,7 @@ var TopSection = React.createClass({
 		var config = this.props.config;
 		var percentage = (Moment().diff(config.start, 'days')) / ( config.end.diff(config.start, 'days'));
 
+		/*
 
 		console.log(config.start, config.end);
 
@@ -42,7 +43,7 @@ var TopSection = React.createClass({
 
 		console.log(Moment().diff(config.start, 'days'));
 		console.log(Moment().diff(Moment("11-10-2013 09:03 AM", "DD-MM-YYYY hh:mm A"), "minute"));
-
+	*/
 		return(
 			<div className={'topSection ' + getTimeOfDay() }>
 				<div className='startMessage'>

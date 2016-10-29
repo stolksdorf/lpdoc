@@ -22,6 +22,8 @@ var sprites = {
 };
 
 
+const Actions = require('lpdoc/actions.js');
+const Store = require('lpdoc/store.js');
 
 
 var lpdoc = React.createClass({
@@ -34,8 +36,10 @@ var lpdoc = React.createClass({
 	},
 
 	getInitialState: function() {
+
 		return this.getUpdatedState(0,
 			this.processConfig(this.props.config));
+
 	},
 
 	//Converts dates within the config to moment data structures
@@ -44,7 +48,7 @@ var lpdoc = React.createClass({
 		config.start = Moment(config.start, "MMM Do, YYYY");
 		config.end = Moment(config.end, "MMM Do, YYYY");
 
-		console.log('CORE', config.end.diff(config.start, 'days'));
+		//console.log('CORE', config.end.diff(config.start, 'days'));
 
 
 		config.lastSprite = sprites.base;
@@ -89,11 +93,21 @@ var lpdoc = React.createClass({
 
 
 	componentDidMount: function() {
-		console.log('mounting');
+		console.log('mounting', this.props);
+
+		Actions.setConfig(this.props.config);
+		Actions.setEvents(this.props.events);
+
+		console.log(Store.getPercentage());
 	},
 
 	handleScroll : function(e){
-		this.setState(this.getUpdatedState(window.pageYOffset))
+		this.setState(this.getUpdatedState(window.pageYOffset));
+
+		Actions.scroll(window.pageYOffset);
+
+		console.log(Store.getPercentage());
+
 	},
 
 
@@ -111,6 +125,12 @@ var lpdoc = React.createClass({
 				</div>
 			);
 		}
+
+		console.log(Store);
+
+		return <div className='lpdoc' onScroll={this.handleScroll}>
+			{Store.getPercentage()}
+		</div>
 
 		return(
 			<div className='lpdoc' onScroll={this.handleScroll}>

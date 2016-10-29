@@ -1,3 +1,4 @@
+require('app-module-path').addPath('./shared');
 var express = require("express");
 var app = express();
 var fs = require('fs');
@@ -23,8 +24,8 @@ app.use((req, res) => {
 		prerenderWith : './client/lpdoc/lpdoc.jsx',
 		initialProps: {
 			url: req.originalUrl,
-			config : config,
-			events : []
+			config : Config,
+			events : Events
 		},
 		clearRequireCache : !process.env.PRODUCTION,
 	}, (err, page) => {

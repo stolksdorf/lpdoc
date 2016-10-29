@@ -1,31 +1,19 @@
 {
+	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\itemBar\\itemBar.jsx": [
+		"react",
+		"lodash",
+		"classnames"
+	],
 	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\topSection\\topSection.jsx": [
 		"react",
 		"lodash",
 		"classnames",
 		"moment"
 	],
-	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\itemBar\\itemBar.jsx": [
-		"react",
-		"lodash",
-		"classnames"
-	],
 	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\pointsBar\\pointsBar.jsx": [
 		"react",
 		"lodash",
 		"classnames"
-	],
-	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\player\\sprite\\sprite.jsx": [
-		"react",
-		"lodash",
-		"classnames"
-	],
-	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\player\\player.jsx": [
-		"react",
-		"lodash",
-		"classnames",
-		"../itemIcon/itemIcon.jsx",
-		"./sprite/sprite.jsx"
 	],
 	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\itemIcon\\itemIcon.jsx": [
 		"react",
@@ -39,15 +27,31 @@
 		"moment",
 		"../itemIcon/itemIcon.jsx"
 	],
+	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\player\\sprite\\sprite.jsx": [
+		"react",
+		"lodash",
+		"classnames"
+	],
+	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\player\\player.jsx": [
+		"react",
+		"lodash",
+		"classnames",
+		"../itemIcon/itemIcon.jsx",
+		"./sprite/sprite.jsx"
+	],
+	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\shared\\lpdoc\\actions.js": [
+		"pico-flux"
+	],
 	"C:\\Dropbox\\root\\Programming\\Javascript\\lpdoc\\client\\lpdoc\\lpdoc.jsx": [
 		"react",
 		"lodash",
 		"classnames",
 		"moment",
-		"./topSection/topSection.jsx",
 		"./itemBar/itemBar.jsx",
+		"./topSection/topSection.jsx",
 		"./pointsBar/pointsBar.jsx",
+		"./timeline/timeline.jsx",
 		"./player/player.jsx",
-		"./timeline/timeline.jsx"
+		"lpdoc/actions.js"
 	]
 }
