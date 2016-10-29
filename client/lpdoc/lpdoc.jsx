@@ -98,6 +98,8 @@ var LPDoc = React.createClass({
 
 
 	handleScroll : function(e){
+
+		console.log('scoll!');
 		this.setState(this.getUpdatedState(window.pageYOffset));
 
 		Actions.scroll(window.pageYOffset);

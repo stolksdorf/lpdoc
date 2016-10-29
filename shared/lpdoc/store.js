@@ -55,6 +55,9 @@ module.exports = flux.createStore({
 
 	},
 },{
+	getState : function(){
+		return State;
+	},
 
 	getScroll : function(){
 		return State.scroll
@@ -74,12 +77,21 @@ module.exports = flux.createStore({
 
 
 	getCompletedEvents : function(){
-
+		return _.slice(State.events, 0, State.lastCompletedEventIndex);
 	},
+	getUpcomingEvents : function(){
+		return _.slice(State.events, State.lastCompletedEventIndex);
+	},
+
+
 	getCurrentEvent : function(){
 		return State.currentEvent;
 	},
 	getCurrentSprite : function(){
 		return State.currentSprite;
+	},
+
+	getTotalDays : function(){
+		return Moment().diff(State.start, 'days') + 1;
 	}
 })

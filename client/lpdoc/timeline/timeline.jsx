@@ -8,8 +8,14 @@ var Moment = require('moment');
 
 var Item = require('../itemIcon/itemIcon.jsx');
 
-var Timeline = React.createClass({
+const Store = require('lpdoc/store.js');
 
+const TOP_OFFSET = 300;
+
+var Timeline = React.createClass({
+	mixins : [Store.mixin()],
+
+/*
 	backgroundPosition : 0,
 
 	getDefaultProps: function() {
@@ -17,7 +23,6 @@ var Timeline = React.createClass({
 			scroll : 0
 		};
 	},
-
 	componentWillReceiveProps: function(nextProps) {
 
 		if(!this.props.currentItem){
@@ -25,11 +30,50 @@ var Timeline = React.createClass({
 		}
 	},
 
+*/
+	getInitialState: function() {
+		return this.getState();
+	},
+	onStoreChange : function(){
+		this.setState(this.getState())
+	},
+
+	getState : function(){
+		return {
+			upcomingEvents : Store.getUpcomingEvents()
+		}
+	},
+
+	renderMarkers : function(){
+
+
+		return _.times(Store.getTotalDays(), (dayIndex) => {
+			return <div
+					className='marker'
+					key={dayIndex}
+					style={{top: Store.getState().pixelRatio * dayIndex + TOP_OFFSET}}>
+
+				{Moment(Store.getState().start).add(dayIndex, 'days').format('MMM Do')}
+			</div>
+		});
+	},
+
+	renderItems : function(){
+		return _.map(this.state.upcomingEvents, (event) => {
+			var days = event.date.diff(Store.getState().start, 'days');
+			return <Item item={event} key={event.date.format()} style={{top: Store.getState().pixelRatio * days + TOP_OFFSET}}>
+				<i className={'fa ' + event.icon} />
+			</Item>
+		});
+	},
+
 	render : function(){
+
+		/*
 		var self = this;
 		var config = this.props.config;
 
-		var TOP_OFFSET = 300;
+
 
 
 
@@ -40,9 +84,7 @@ var Timeline = React.createClass({
 
 
 		var markers = _.times(Moment().diff(config.start, 'days') + 1, function(day){
-			return <div className='marker' key={day} style={{top: config.dayPixelRatio * day + TOP_OFFSET}}>
-				{Moment(config.start).add(day, 'days').format('MMM Do')}
-				</div>
+
 		});
 
 
@@ -63,7 +105,7 @@ var Timeline = React.createClass({
 
 			return r;
 		},[]);
-
+		*/
 
 		var backgroundStyle = {};
 
@@ -74,10 +116,10 @@ var Timeline = React.createClass({
 
 
 		return(
-			<div className='timeline' style={{height : numDays * config.dayPixelRatio}}>
+			<div className='timeline' style={{height : Store.getTotalDays() * Store.getState().pixelRatio}}>
 
-				{markers}
-				{items}
+				{this.renderMarkers()}
+				{this.renderItems()}
 				<div className='background' style={backgroundStyle}></div>
 				<div className='topGradient'></div>
 				<div className='bottomGradient'></div>
