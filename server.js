@@ -3,8 +3,15 @@ var app = express();
 var fs = require('fs');
 var vitreumRender = require('vitreum/render');
 app.use(express.static(__dirname + '/build'));
+const YAML = require('js-yaml');
+
 
 const config = require('./lpdoc_config.json');
+
+
+const Events = YAML.safeLoad(fs.readFileSync('./lp_med_events.yaml', 'utf8'));
+const Config = YAML.safeLoad(fs.readFileSync('./config.yaml', 'utf8'));
+
 
 //Render Page
 app.use((req, res) => {
@@ -24,9 +31,6 @@ app.use((req, res) => {
 		return res.send(page)
 	});
 });
-
-
-
 
 
 
